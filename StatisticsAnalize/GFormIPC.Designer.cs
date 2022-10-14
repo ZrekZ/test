@@ -63,6 +63,7 @@ namespace StatisticsAnalize
 			this.GIpcData.AllowUserToAddRows = false;
 			this.GIpcData.AllowUserToDeleteRows = false;
 			this.GIpcData.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+			this.GIpcData.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.GIpcData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.GIpcData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Gostlin,
