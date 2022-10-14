@@ -91,6 +91,8 @@ namespace StatisticsAnalize
 			this.lbstep = new System.Windows.Forms.Label();
 			this.lt = new System.Windows.Forms.Label();
 			this.lalfa = new System.Windows.Forms.Label();
+			this.рассчетDWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.рассчетDWToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.DefData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VRPdata)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.IPCdata)).BeginInit();
@@ -100,12 +102,13 @@ namespace StatisticsAnalize
 			// DefData
 			// 
 			this.DefData.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+			this.DefData.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.DefData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.DefData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Years,
             this.VRP,
             this.IPC});
-			this.DefData.Location = new System.Drawing.Point(341, 90);
+			this.DefData.Location = new System.Drawing.Point(423, 90);
 			this.DefData.Name = "DefData";
 			this.DefData.RowHeadersWidth = 51;
 			this.DefData.RowTemplate.Height = 29;
@@ -139,6 +142,7 @@ namespace StatisticsAnalize
 			this.VRPdata.AllowUserToAddRows = false;
 			this.VRPdata.AllowUserToDeleteRows = false;
 			this.VRPdata.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+			this.VRPdata.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.VRPdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.VRPdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.number,
@@ -156,7 +160,7 @@ namespace StatisticsAnalize
             this.Ystr,
             this.Ypss,
             this.ESS});
-			this.VRPdata.Location = new System.Drawing.Point(0, 90);
+			this.VRPdata.Location = new System.Drawing.Point(0, 92);
 			this.VRPdata.Name = "VRPdata";
 			this.VRPdata.ReadOnly = true;
 			this.VRPdata.RowHeadersWidth = 51;
@@ -308,6 +312,7 @@ namespace StatisticsAnalize
 			this.IPCdata.AllowUserToAddRows = false;
 			this.IPCdata.AllowUserToDeleteRows = false;
 			this.IPCdata.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+			this.IPCdata.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.IPCdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.IPCdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -455,6 +460,7 @@ namespace StatisticsAnalize
 			// 
 			// menuStrip1
 			// 
+			this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.статистикаПоказателейToolStripMenuItem,
@@ -501,7 +507,8 @@ namespace StatisticsAnalize
 			// 
 			this.валовойПродуктToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.форматToolStripMenuItem1,
-            this.gToolStripMenuItem});
+            this.gToolStripMenuItem,
+            this.рассчетDWToolStripMenuItem});
 			this.валовойПродуктToolStripMenuItem.Name = "валовойПродуктToolStripMenuItem";
 			this.валовойПродуктToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
 			this.валовойПродуктToolStripMenuItem.Text = "Валовой продукт";
@@ -512,7 +519,7 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem1,
             this.графическийToolStripMenuItem1});
 			this.форматToolStripMenuItem1.Name = "форматToolStripMenuItem1";
-			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(145, 26);
+			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
 			this.форматToolStripMenuItem1.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem1
@@ -532,15 +539,16 @@ namespace StatisticsAnalize
 			// gToolStripMenuItem
 			// 
 			this.gToolStripMenuItem.Name = "gToolStripMenuItem";
-			this.gToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-			this.gToolStripMenuItem.Text = "G";
+			this.gToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.gToolStripMenuItem.Text = "Рассчет G";
 			this.gToolStripMenuItem.Click += new System.EventHandler(this.gToolStripMenuItem_Click);
 			// 
 			// индексЦенToolStripMenuItem
 			// 
 			this.индексЦенToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.форматToolStripMenuItem2,
-            this.gToolStripMenuItem1});
+            this.gToolStripMenuItem1,
+            this.рассчетDWToolStripMenuItem1});
 			this.индексЦенToolStripMenuItem.Name = "индексЦенToolStripMenuItem";
 			this.индексЦенToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
 			this.индексЦенToolStripMenuItem.Text = "Индекс цен";
@@ -551,28 +559,28 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem2,
             this.графическийToolStripMenuItem2});
 			this.форматToolStripMenuItem2.Name = "форматToolStripMenuItem2";
-			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(145, 26);
+			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
 			this.форматToolStripMenuItem2.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem2
 			// 
 			this.табличныйToolStripMenuItem2.Name = "табличныйToolStripMenuItem2";
-			this.табличныйToolStripMenuItem2.Size = new System.Drawing.Size(183, 26);
+			this.табличныйToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
 			this.табличныйToolStripMenuItem2.Text = "Табличный";
 			this.табличныйToolStripMenuItem2.Click += new System.EventHandler(this.табличныйToolStripMenuItem2_Click);
 			// 
 			// графическийToolStripMenuItem2
 			// 
 			this.графическийToolStripMenuItem2.Name = "графическийToolStripMenuItem2";
-			this.графическийToolStripMenuItem2.Size = new System.Drawing.Size(183, 26);
+			this.графическийToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
 			this.графическийToolStripMenuItem2.Text = "Графический";
 			this.графическийToolStripMenuItem2.Click += new System.EventHandler(this.графическийToolStripMenuItem2_Click);
 			// 
 			// gToolStripMenuItem1
 			// 
 			this.gToolStripMenuItem1.Name = "gToolStripMenuItem1";
-			this.gToolStripMenuItem1.Size = new System.Drawing.Size(145, 26);
-			this.gToolStripMenuItem1.Text = "G";
+			this.gToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.gToolStripMenuItem1.Text = "Рассчет G";
 			this.gToolStripMenuItem1.Click += new System.EventHandler(this.gToolStripMenuItem1_Click);
 			// 
 			// Lvrp
@@ -656,11 +664,26 @@ namespace StatisticsAnalize
 			this.lalfa.TabIndex = 7;
 			this.lalfa.Text = ".";
 			// 
+			// рассчетDWToolStripMenuItem
+			// 
+			this.рассчетDWToolStripMenuItem.Name = "рассчетDWToolStripMenuItem";
+			this.рассчетDWToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.рассчетDWToolStripMenuItem.Text = "Рассчет DW";
+			this.рассчетDWToolStripMenuItem.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem_Click);
+			// 
+			// рассчетDWToolStripMenuItem1
+			// 
+			this.рассчетDWToolStripMenuItem1.Name = "рассчетDWToolStripMenuItem1";
+			this.рассчетDWToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.рассчетDWToolStripMenuItem1.Text = "Рассчет DW";
+			this.рассчетDWToolStripMenuItem1.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem1_Click);
+			// 
 			// Forms1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1898, 668);
+			this.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.ClientSize = new System.Drawing.Size(1898, 680);
 			this.Controls.Add(this.Lvrp);
 			this.Controls.Add(this.lalfa);
 			this.Controls.Add(this.lt);
@@ -754,6 +777,8 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.ToolStripMenuItem gToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem gToolStripMenuItem1;
 		public System.Windows.Forms.DataGridView VRPdata;
+		private System.Windows.Forms.ToolStripMenuItem рассчетDWToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem рассчетDWToolStripMenuItem1;
 	}
 }
 

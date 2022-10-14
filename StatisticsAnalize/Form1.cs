@@ -170,6 +170,11 @@ namespace StatisticsAnalize
 			
 			VRPdata.Rows.Add(SumVrpCells(0), "-", SumVrpCells(2), SumVrpCells(3), SumVrpCells(4), SumVrpCells(5), SumVrpCells(6), SumVrpCells(7),SumVrpCells(8));
 			VRPdata.Rows[12].DefaultCellStyle.ForeColor = Color.Red;
+			VRPdata.Rows.Add();
+			VRPdata.Rows.Add(null, "Коэфиценты", "Стандартная ошибка", "t-статистика", null, "ta", "tb", "tтабл");
+			VRPdata.Rows.Add("Y-пересечение", 1, 1, 1, null, 1, 1, 1);
+			VRPdata.Rows.Add("Переменная X1", 1, 1, 1, null, "R^2", "Fp", "Ft");
+			VRPdata.Rows.Add(null, null, null, null, null, 1, 1, 1);
 		}
 		public void FillTableIPC()
 		{
@@ -185,7 +190,7 @@ namespace StatisticsAnalize
 
 			double alfa = 0.8; lalfa.Text = "Альфа = " + alfa;
 			double T = Math.Pow(IPCs[11]/ IPCs[0],(1/(numbers[11]-1))); lt.Text = "T = " + T;
-
+			
 			for (int i = 0; i < years.Length; i++)
 			{
 				/*	1-номер(х) 2-год 3-ИПЦ(у) 4-x^2 5-x*y 6-Lnx 7-Lny 8-Lnx*Lny 9-x*Lny 10-Ylin 11-Ypok 12-Ystep 13-Ystr 14-Ypss 15-Yess*/
@@ -194,7 +199,11 @@ namespace StatisticsAnalize
 
 			IPCdata.Rows.Add(SumIpcCells(0), "-", SumIpcCells(2), SumIpcCells(3), SumIpcCells(4), SumIpcCells(5), SumIpcCells(6), SumIpcCells(7), SumIpcCells(8));
 			IPCdata.Rows[12].DefaultCellStyle.ForeColor = Color.Red;
-			
+			IPCdata.Rows.Add();
+			IPCdata.Rows.Add(null, "Коэфиценты", "Стандартная ошибка", "t-статистика", null, "ta", "tb", "tтабл");
+			IPCdata.Rows.Add("Y-пересечение",1,1,1, null, 1, 1, 1);
+			IPCdata.Rows.Add("Переменная X1",1,1,1, null, "R^2", "Fp", "Ft");
+			IPCdata.Rows.Add(null,null,null,null,null,1,1,1);
 		}
 
 		private void табличныйToolStripMenuItem_Click(object sender, EventArgs e)
@@ -253,6 +262,18 @@ namespace StatisticsAnalize
 			{
 				MessageBox.Show("Откройте таблицу значений");
 			};
+		}
+
+		private void рассчетDWToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			DW_VRP form = new DW_VRP();
+			form.ShowDialog();
+		}
+
+		private void рассчетDWToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			DW_IPC form = new DW_IPC();
+			form.ShowDialog();
 		}
 	}
 }
