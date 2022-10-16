@@ -303,6 +303,8 @@ namespace StatisticsAnalize
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScroll = true;
+			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(1617, 785);
 			this.Controls.Add(this.Fppok);
 			this.Controls.Add(this.GypokPow);

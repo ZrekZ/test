@@ -34,6 +34,21 @@ namespace StatisticsAnalize
 			this.VRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.IPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.VRPdata = new System.Windows.Forms.DataGridView();
+			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.xsquare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.xy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.logx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.logy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.lnxlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.xlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.yline = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Yipokaz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Yistep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Ystr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Ypss = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ESS = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ldef = new System.Windows.Forms.Label();
 			this.Lipc = new System.Windows.Forms.Label();
 			this.IPCdata = new System.Windows.Forms.DataGridView();
@@ -85,21 +100,6 @@ namespace StatisticsAnalize
 			this.lbstep = new System.Windows.Forms.Label();
 			this.lt = new System.Windows.Forms.Label();
 			this.lalfa = new System.Windows.Forms.Label();
-			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.xsquare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.xy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.logx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.logy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.lnxlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.xlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.yline = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Yipokaz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Yistep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Ystr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Ypss = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ESS = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.DefData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VRPdata)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.IPCdata)).BeginInit();
@@ -174,6 +174,126 @@ namespace StatisticsAnalize
 			this.VRPdata.RowTemplate.Height = 29;
 			this.VRPdata.Size = new System.Drawing.Size(1818, 411);
 			this.VRPdata.TabIndex = 1;
+			// 
+			// number
+			// 
+			this.number.HeaderText = "№";
+			this.number.MinimumWidth = 6;
+			this.number.Name = "number";
+			this.number.ReadOnly = true;
+			this.number.Width = 50;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.HeaderText = "Год";
+			this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Width = 125;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.HeaderText = "ВРП";
+			this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			this.dataGridViewTextBoxColumn2.Width = 125;
+			// 
+			// xsquare
+			// 
+			this.xsquare.HeaderText = "x^2";
+			this.xsquare.MinimumWidth = 6;
+			this.xsquare.Name = "xsquare";
+			this.xsquare.ReadOnly = true;
+			this.xsquare.Width = 125;
+			// 
+			// xy
+			// 
+			this.xy.HeaderText = "x*y";
+			this.xy.MinimumWidth = 6;
+			this.xy.Name = "xy";
+			this.xy.ReadOnly = true;
+			this.xy.Width = 125;
+			// 
+			// logx
+			// 
+			this.logx.HeaderText = "Ln(x)";
+			this.logx.MinimumWidth = 6;
+			this.logx.Name = "logx";
+			this.logx.ReadOnly = true;
+			this.logx.Width = 125;
+			// 
+			// logy
+			// 
+			this.logy.HeaderText = "ln(y)";
+			this.logy.MinimumWidth = 6;
+			this.logy.Name = "logy";
+			this.logy.ReadOnly = true;
+			this.logy.Width = 125;
+			// 
+			// lnxlny
+			// 
+			this.lnxlny.HeaderText = "ln(x)*ln(y)";
+			this.lnxlny.MinimumWidth = 6;
+			this.lnxlny.Name = "lnxlny";
+			this.lnxlny.ReadOnly = true;
+			this.lnxlny.Width = 125;
+			// 
+			// xlny
+			// 
+			this.xlny.HeaderText = "x*ln(y)";
+			this.xlny.MinimumWidth = 6;
+			this.xlny.Name = "xlny";
+			this.xlny.ReadOnly = true;
+			this.xlny.Width = 125;
+			// 
+			// yline
+			// 
+			this.yline.HeaderText = "Yi лин.";
+			this.yline.MinimumWidth = 6;
+			this.yline.Name = "yline";
+			this.yline.ReadOnly = true;
+			this.yline.Width = 125;
+			// 
+			// Yipokaz
+			// 
+			this.Yipokaz.HeaderText = "Yi пок.";
+			this.Yipokaz.MinimumWidth = 6;
+			this.Yipokaz.Name = "Yipokaz";
+			this.Yipokaz.ReadOnly = true;
+			this.Yipokaz.Width = 125;
+			// 
+			// Yistep
+			// 
+			this.Yistep.HeaderText = "Yi степ.";
+			this.Yistep.MinimumWidth = 6;
+			this.Yistep.Name = "Yistep";
+			this.Yistep.ReadOnly = true;
+			this.Yistep.Width = 125;
+			// 
+			// Ystr
+			// 
+			this.Ystr.HeaderText = "Yi с.т.р.";
+			this.Ystr.MinimumWidth = 6;
+			this.Ystr.Name = "Ystr";
+			this.Ystr.ReadOnly = true;
+			this.Ystr.Width = 125;
+			// 
+			// Ypss
+			// 
+			this.Ypss.HeaderText = "Yi п.с.с.";
+			this.Ypss.MinimumWidth = 6;
+			this.Ypss.Name = "Ypss";
+			this.Ypss.ReadOnly = true;
+			this.Ypss.Width = 125;
+			// 
+			// ESS
+			// 
+			this.ESS.HeaderText = "Yi э.с.с.";
+			this.ESS.MinimumWidth = 6;
+			this.ESS.Name = "ESS";
+			this.ESS.ReadOnly = true;
+			this.ESS.Width = 125;
 			// 
 			// ldef
 			// 
@@ -621,130 +741,12 @@ namespace StatisticsAnalize
 			this.lalfa.TabIndex = 7;
 			this.lalfa.Text = ".";
 			// 
-			// number
-			// 
-			this.number.HeaderText = "№";
-			this.number.MinimumWidth = 6;
-			this.number.Name = "number";
-			this.number.ReadOnly = true;
-			this.number.Width = 50;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.HeaderText = "Год";
-			this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Width = 125;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.HeaderText = "ВРП";
-			this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			this.dataGridViewTextBoxColumn2.Width = 125;
-			// 
-			// xsquare
-			// 
-			this.xsquare.HeaderText = "x^2";
-			this.xsquare.MinimumWidth = 6;
-			this.xsquare.Name = "xsquare";
-			this.xsquare.ReadOnly = true;
-			this.xsquare.Width = 125;
-			// 
-			// xy
-			// 
-			this.xy.HeaderText = "x*y";
-			this.xy.MinimumWidth = 6;
-			this.xy.Name = "xy";
-			this.xy.ReadOnly = true;
-			this.xy.Width = 125;
-			// 
-			// logx
-			// 
-			this.logx.HeaderText = "Ln(x)";
-			this.logx.MinimumWidth = 6;
-			this.logx.Name = "logx";
-			this.logx.ReadOnly = true;
-			this.logx.Width = 125;
-			// 
-			// logy
-			// 
-			this.logy.HeaderText = "ln(y)";
-			this.logy.MinimumWidth = 6;
-			this.logy.Name = "logy";
-			this.logy.ReadOnly = true;
-			this.logy.Width = 125;
-			// 
-			// lnxlny
-			// 
-			this.lnxlny.HeaderText = "ln(x)*ln(y)";
-			this.lnxlny.MinimumWidth = 6;
-			this.lnxlny.Name = "lnxlny";
-			this.lnxlny.ReadOnly = true;
-			this.lnxlny.Width = 125;
-			// 
-			// xlny
-			// 
-			this.xlny.HeaderText = "x*ln(y)";
-			this.xlny.MinimumWidth = 6;
-			this.xlny.Name = "xlny";
-			this.xlny.ReadOnly = true;
-			this.xlny.Width = 125;
-			// 
-			// yline
-			// 
-			this.yline.HeaderText = "Yi лин.";
-			this.yline.MinimumWidth = 6;
-			this.yline.Name = "yline";
-			this.yline.ReadOnly = true;
-			this.yline.Width = 125;
-			// 
-			// Yipokaz
-			// 
-			this.Yipokaz.HeaderText = "Yi пок.";
-			this.Yipokaz.MinimumWidth = 6;
-			this.Yipokaz.Name = "Yipokaz";
-			this.Yipokaz.ReadOnly = true;
-			this.Yipokaz.Width = 125;
-			// 
-			// Yistep
-			// 
-			this.Yistep.HeaderText = "Yi степ.";
-			this.Yistep.MinimumWidth = 6;
-			this.Yistep.Name = "Yistep";
-			this.Yistep.ReadOnly = true;
-			this.Yistep.Width = 125;
-			// 
-			// Ystr
-			// 
-			this.Ystr.HeaderText = "Yi с.т.р.";
-			this.Ystr.MinimumWidth = 6;
-			this.Ystr.Name = "Ystr";
-			this.Ystr.ReadOnly = true;
-			this.Ystr.Width = 125;
-			// 
-			// Ypss
-			// 
-			this.Ypss.HeaderText = "Yi п.с.с.";
-			this.Ypss.MinimumWidth = 6;
-			this.Ypss.Name = "Ypss";
-			this.Ypss.ReadOnly = true;
-			this.Ypss.Width = 125;
-			// 
-			// ESS
-			// 
-			this.ESS.HeaderText = "Yi э.с.с.";
-			this.ESS.MinimumWidth = 6;
-			this.ESS.Name = "ESS";
-			this.ESS.ReadOnly = true;
-			this.ESS.Width = 125;
-			// 
 			// Forms1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScroll = true;
+			this.AutoSize = true;
 			this.BackColor = System.Drawing.SystemColors.ButtonFace;
 			this.ClientSize = new System.Drawing.Size(1898, 680);
 			this.Controls.Add(this.Lvrp);
