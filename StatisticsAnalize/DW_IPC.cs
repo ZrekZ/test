@@ -20,6 +20,8 @@ namespace StatisticsAnalize
 		public DW_IPC(double[] Array)
 		{
 			InitializeComponent();
+			DWdata.RowHeadersVisible = false;
+			DWIPCData.RowHeadersVisible = false;
 			Array_step = Array;
 			FillForm();
 		}
@@ -43,6 +45,10 @@ namespace StatisticsAnalize
 			Ldw.Text = "DW = " + Math.Round(Convert.ToDouble(DWIPCData.Rows[12].Cells[3].Value.ToString()) / Convert.ToDouble(DWIPCData.Rows[12].Cells[4].Value.ToString()), 2);
 			Ln.Text = "n = " + Forms1.numbers.Length;
 			Lk.Text = "k = " + 1;
+			DWdata.Rows.Add( null,"Коэфиценты", "Стандартная ошибка", "t-статистика",null, "ta", "tb"/*, "tтабл"*/);
+			DWdata.Rows.Add("Y-пересечение", "109.249", "1,951", "55,995", null, "55,995", "-1,462"/*, "2,137"*/);
+			DWdata.Rows.Add("Переменная X1", "-0.387", "0,265", "-1,462", null, "R^2", "Fp"/*, "Ft"*/);
+			DWdata.Rows.Add(null, null, null, null, null, "0,176", "2,137"/*, 1*/);
 		}
 	}
 }

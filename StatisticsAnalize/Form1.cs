@@ -171,10 +171,10 @@ namespace StatisticsAnalize
 			VRPdata.Rows.Add(SumVrpCells(0), "-", SumVrpCells(2), SumVrpCells(3), SumVrpCells(4), SumVrpCells(5), SumVrpCells(6), SumVrpCells(7),SumVrpCells(8));
 			VRPdata.Rows[12].DefaultCellStyle.ForeColor = Color.Red;
 			VRPdata.Rows.Add();
-			VRPdata.Rows.Add(null, "Коэфиценты", "Стандартная ошибка", "t-статистика", null, "ta", "tb", "tтабл");
-			VRPdata.Rows.Add("Y-пересечение", 1, 1, 1, null, 1, 1, 1);
-			VRPdata.Rows.Add("Переменная X1", 1, 1, 1, null, "R^2", "Fp", "Ft");
-			VRPdata.Rows.Add(null, null, null, null, null, 1, 1, 1);
+			VRPdata.Rows.Add(null, "Коэфиценты", "Стандартная ошибка", "t-статистика", null, "ta", "tb"/*, "tтабл"*/);
+			VRPdata.Rows.Add("Y-пересечение", 490223.6,38334.3, 12.788, null, 12.788, 16.281/*, 1*/);
+			VRPdata.Rows.Add("Переменная X1", 84804, 5208.6, 16.281, null, "R^2", "Fp"/*, "Ft"*/);
+			VRPdata.Rows.Add(null, null, null, null, null, 0.963, 265.08/*, 1*/);
 		}
 		public void FillTableIPC()
 		{

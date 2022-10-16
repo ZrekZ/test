@@ -38,7 +38,16 @@ namespace StatisticsAnalize
 			this.LDW = new System.Windows.Forms.Label();
 			this.Ln = new System.Windows.Forms.Label();
 			this.Lk = new System.Windows.Forms.Label();
+			this.DWdata1 = new System.Windows.Forms.DataGridView();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.DWVRPData)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.DWdata1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// DWVRPData
@@ -59,7 +68,7 @@ namespace StatisticsAnalize
 			this.DWVRPData.ReadOnly = true;
 			this.DWVRPData.RowHeadersWidth = 51;
 			this.DWVRPData.RowTemplate.Height = 29;
-			this.DWVRPData.Size = new System.Drawing.Size(582, 451);
+			this.DWVRPData.Size = new System.Drawing.Size(582, 418);
 			this.DWVRPData.TabIndex = 0;
 			// 
 			// DW_X
@@ -105,7 +114,7 @@ namespace StatisticsAnalize
 			// LDW
 			// 
 			this.LDW.AutoSize = true;
-			this.LDW.Location = new System.Drawing.Point(21, 463);
+			this.LDW.Location = new System.Drawing.Point(21, 443);
 			this.LDW.Name = "LDW";
 			this.LDW.Size = new System.Drawing.Size(12, 20);
 			this.LDW.TabIndex = 1;
@@ -114,7 +123,7 @@ namespace StatisticsAnalize
 			// Ln
 			// 
 			this.Ln.AutoSize = true;
-			this.Ln.Location = new System.Drawing.Point(21, 493);
+			this.Ln.Location = new System.Drawing.Point(21, 482);
 			this.Ln.Name = "Ln";
 			this.Ln.Size = new System.Drawing.Size(12, 20);
 			this.Ln.TabIndex = 2;
@@ -129,12 +138,92 @@ namespace StatisticsAnalize
 			this.Lk.TabIndex = 2;
 			this.Lk.Text = ".";
 			// 
+			// DWdata1
+			// 
+			this.DWdata1.AllowUserToAddRows = false;
+			this.DWdata1.AllowUserToDeleteRows = false;
+			this.DWdata1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+			this.DWdata1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.DWdata1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.DWdata1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+			this.DWdata1.Location = new System.Drawing.Point(21, 555);
+			this.DWdata1.Name = "DWdata1";
+			this.DWdata1.ReadOnly = true;
+			this.DWdata1.RowHeadersWidth = 51;
+			this.DWdata1.RowTemplate.Height = 29;
+			this.DWdata1.Size = new System.Drawing.Size(561, 149);
+			this.DWdata1.TabIndex = 3;
+			// 
+			// Column1
+			// 
+			this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column1.HeaderText = "";
+			this.Column1.MinimumWidth = 6;
+			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
+			// 
+			// Column5
+			// 
+			this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column5.HeaderText = " ";
+			this.Column5.MinimumWidth = 6;
+			this.Column5.Name = "Column5";
+			this.Column5.ReadOnly = true;
+			// 
+			// Column6
+			// 
+			this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column6.HeaderText = " ";
+			this.Column6.MinimumWidth = 6;
+			this.Column6.Name = "Column6";
+			this.Column6.ReadOnly = true;
+			// 
+			// Column7
+			// 
+			this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column7.HeaderText = " ";
+			this.Column7.MinimumWidth = 6;
+			this.Column7.Name = "Column7";
+			this.Column7.ReadOnly = true;
+			// 
+			// Column2
+			// 
+			this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column2.HeaderText = "";
+			this.Column2.MinimumWidth = 6;
+			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
+			// 
+			// Column3
+			// 
+			this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column3.HeaderText = "";
+			this.Column3.MinimumWidth = 6;
+			this.Column3.Name = "Column3";
+			this.Column3.ReadOnly = true;
+			// 
+			// Column4
+			// 
+			this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column4.HeaderText = "";
+			this.Column4.MinimumWidth = 6;
+			this.Column4.Name = "Column4";
+			this.Column4.ReadOnly = true;
+			// 
 			// DW_VRP
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(582, 558);
+			this.ClientSize = new System.Drawing.Size(602, 716);
+			this.Controls.Add(this.DWdata1);
 			this.Controls.Add(this.Lk);
 			this.Controls.Add(this.Ln);
 			this.Controls.Add(this.LDW);
@@ -142,6 +231,7 @@ namespace StatisticsAnalize
 			this.Name = "DW_VRP";
 			this.Text = "DW_VRP";
 			((System.ComponentModel.ISupportInitialize)(this.DWVRPData)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.DWdata1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -158,5 +248,13 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.Label LDW;
 		private System.Windows.Forms.Label Ln;
 		private System.Windows.Forms.Label Lk;
+		private System.Windows.Forms.DataGridView DWdata1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
 	}
 }
