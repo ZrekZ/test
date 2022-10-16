@@ -34,21 +34,6 @@ namespace StatisticsAnalize
 			this.VRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.IPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.VRPdata = new System.Windows.Forms.DataGridView();
-			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.xsquare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.xy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.logx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.logy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.lnxlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.xlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.yline = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Yipokaz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Yistep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Ystr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Ypss = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ESS = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ldef = new System.Windows.Forms.Label();
 			this.Lipc = new System.Windows.Forms.Label();
 			this.IPCdata = new System.Windows.Forms.DataGridView();
@@ -77,11 +62,20 @@ namespace StatisticsAnalize
 			this.табличныйToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.графическийToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.gToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.рассчетDWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.индексЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.форматToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.табличныйToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.графическийToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.gToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.рассчетDWToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.парнаяРегрессияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.вНПИПЦToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.рассчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.графикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.иПЦВНПToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.рассчетToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.графикToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.Lvrp = new System.Windows.Forms.Label();
 			this.lalin = new System.Windows.Forms.Label();
 			this.lblin = new System.Windows.Forms.Label();
@@ -91,8 +85,21 @@ namespace StatisticsAnalize
 			this.lbstep = new System.Windows.Forms.Label();
 			this.lt = new System.Windows.Forms.Label();
 			this.lalfa = new System.Windows.Forms.Label();
-			this.рассчетDWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.рассчетDWToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.xsquare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.xy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.logx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.logy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.lnxlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.xlny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.yline = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Yipokaz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Yistep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Ystr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Ypss = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ESS = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.DefData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VRPdata)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.IPCdata)).BeginInit();
@@ -167,126 +174,6 @@ namespace StatisticsAnalize
 			this.VRPdata.RowTemplate.Height = 29;
 			this.VRPdata.Size = new System.Drawing.Size(1818, 411);
 			this.VRPdata.TabIndex = 1;
-			// 
-			// number
-			// 
-			this.number.HeaderText = "№";
-			this.number.MinimumWidth = 6;
-			this.number.Name = "number";
-			this.number.ReadOnly = true;
-			this.number.Width = 50;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.HeaderText = "Год";
-			this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Width = 125;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.HeaderText = "ВРП";
-			this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			this.dataGridViewTextBoxColumn2.Width = 125;
-			// 
-			// xsquare
-			// 
-			this.xsquare.HeaderText = "x^2";
-			this.xsquare.MinimumWidth = 6;
-			this.xsquare.Name = "xsquare";
-			this.xsquare.ReadOnly = true;
-			this.xsquare.Width = 125;
-			// 
-			// xy
-			// 
-			this.xy.HeaderText = "x*y";
-			this.xy.MinimumWidth = 6;
-			this.xy.Name = "xy";
-			this.xy.ReadOnly = true;
-			this.xy.Width = 125;
-			// 
-			// logx
-			// 
-			this.logx.HeaderText = "Ln(x)";
-			this.logx.MinimumWidth = 6;
-			this.logx.Name = "logx";
-			this.logx.ReadOnly = true;
-			this.logx.Width = 125;
-			// 
-			// logy
-			// 
-			this.logy.HeaderText = "ln(y)";
-			this.logy.MinimumWidth = 6;
-			this.logy.Name = "logy";
-			this.logy.ReadOnly = true;
-			this.logy.Width = 125;
-			// 
-			// lnxlny
-			// 
-			this.lnxlny.HeaderText = "ln(x)*ln(y)";
-			this.lnxlny.MinimumWidth = 6;
-			this.lnxlny.Name = "lnxlny";
-			this.lnxlny.ReadOnly = true;
-			this.lnxlny.Width = 125;
-			// 
-			// xlny
-			// 
-			this.xlny.HeaderText = "x*ln(y)";
-			this.xlny.MinimumWidth = 6;
-			this.xlny.Name = "xlny";
-			this.xlny.ReadOnly = true;
-			this.xlny.Width = 125;
-			// 
-			// yline
-			// 
-			this.yline.HeaderText = "Yi лин.";
-			this.yline.MinimumWidth = 6;
-			this.yline.Name = "yline";
-			this.yline.ReadOnly = true;
-			this.yline.Width = 125;
-			// 
-			// Yipokaz
-			// 
-			this.Yipokaz.HeaderText = "Yi пок.";
-			this.Yipokaz.MinimumWidth = 6;
-			this.Yipokaz.Name = "Yipokaz";
-			this.Yipokaz.ReadOnly = true;
-			this.Yipokaz.Width = 125;
-			// 
-			// Yistep
-			// 
-			this.Yistep.HeaderText = "Yi степ.";
-			this.Yistep.MinimumWidth = 6;
-			this.Yistep.Name = "Yistep";
-			this.Yistep.ReadOnly = true;
-			this.Yistep.Width = 125;
-			// 
-			// Ystr
-			// 
-			this.Ystr.HeaderText = "Yi с.т.р.";
-			this.Ystr.MinimumWidth = 6;
-			this.Ystr.Name = "Ystr";
-			this.Ystr.ReadOnly = true;
-			this.Ystr.Width = 125;
-			// 
-			// Ypss
-			// 
-			this.Ypss.HeaderText = "Yi п.с.с.";
-			this.Ypss.MinimumWidth = 6;
-			this.Ypss.Name = "Ypss";
-			this.Ypss.ReadOnly = true;
-			this.Ypss.Width = 125;
-			// 
-			// ESS
-			// 
-			this.ESS.HeaderText = "Yi э.с.с.";
-			this.ESS.MinimumWidth = 6;
-			this.ESS.Name = "ESS";
-			this.ESS.ReadOnly = true;
-			this.ESS.Width = 125;
 			// 
 			// ldef
 			// 
@@ -465,7 +352,8 @@ namespace StatisticsAnalize
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.статистикаПоказателейToolStripMenuItem,
             this.валовойПродуктToolStripMenuItem,
-            this.индексЦенToolStripMenuItem});
+            this.индексЦенToolStripMenuItem,
+            this.парнаяРегрессияToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(1898, 28);
@@ -519,7 +407,7 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem1,
             this.графическийToolStripMenuItem1});
 			this.форматToolStripMenuItem1.Name = "форматToolStripMenuItem1";
-			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
 			this.форматToolStripMenuItem1.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem1
@@ -539,9 +427,16 @@ namespace StatisticsAnalize
 			// gToolStripMenuItem
 			// 
 			this.gToolStripMenuItem.Name = "gToolStripMenuItem";
-			this.gToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.gToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
 			this.gToolStripMenuItem.Text = "Рассчет G";
 			this.gToolStripMenuItem.Click += new System.EventHandler(this.gToolStripMenuItem_Click);
+			// 
+			// рассчетDWToolStripMenuItem
+			// 
+			this.рассчетDWToolStripMenuItem.Name = "рассчетDWToolStripMenuItem";
+			this.рассчетDWToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+			this.рассчетDWToolStripMenuItem.Text = "Рассчет DW";
+			this.рассчетDWToolStripMenuItem.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem_Click);
 			// 
 			// индексЦенToolStripMenuItem
 			// 
@@ -559,29 +454,91 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem2,
             this.графическийToolStripMenuItem2});
 			this.форматToolStripMenuItem2.Name = "форматToolStripMenuItem2";
-			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(173, 26);
 			this.форматToolStripMenuItem2.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem2
 			// 
 			this.табличныйToolStripMenuItem2.Name = "табличныйToolStripMenuItem2";
-			this.табличныйToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+			this.табличныйToolStripMenuItem2.Size = new System.Drawing.Size(183, 26);
 			this.табличныйToolStripMenuItem2.Text = "Табличный";
 			this.табличныйToolStripMenuItem2.Click += new System.EventHandler(this.табличныйToolStripMenuItem2_Click);
 			// 
 			// графическийToolStripMenuItem2
 			// 
 			this.графическийToolStripMenuItem2.Name = "графическийToolStripMenuItem2";
-			this.графическийToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+			this.графическийToolStripMenuItem2.Size = new System.Drawing.Size(183, 26);
 			this.графическийToolStripMenuItem2.Text = "Графический";
 			this.графическийToolStripMenuItem2.Click += new System.EventHandler(this.графическийToolStripMenuItem2_Click);
 			// 
 			// gToolStripMenuItem1
 			// 
 			this.gToolStripMenuItem1.Name = "gToolStripMenuItem1";
-			this.gToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.gToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
 			this.gToolStripMenuItem1.Text = "Рассчет G";
 			this.gToolStripMenuItem1.Click += new System.EventHandler(this.gToolStripMenuItem1_Click);
+			// 
+			// рассчетDWToolStripMenuItem1
+			// 
+			this.рассчетDWToolStripMenuItem1.Name = "рассчетDWToolStripMenuItem1";
+			this.рассчетDWToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+			this.рассчетDWToolStripMenuItem1.Text = "Рассчет DW";
+			this.рассчетDWToolStripMenuItem1.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem1_Click);
+			// 
+			// парнаяРегрессияToolStripMenuItem
+			// 
+			this.парнаяРегрессияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вНПИПЦToolStripMenuItem,
+            this.иПЦВНПToolStripMenuItem});
+			this.парнаяРегрессияToolStripMenuItem.Name = "парнаяРегрессияToolStripMenuItem";
+			this.парнаяРегрессияToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
+			this.парнаяРегрессияToolStripMenuItem.Text = "Парная регрессия";
+			// 
+			// вНПИПЦToolStripMenuItem
+			// 
+			this.вНПИПЦToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.рассчетToolStripMenuItem,
+            this.графикToolStripMenuItem});
+			this.вНПИПЦToolStripMenuItem.Name = "вНПИПЦToolStripMenuItem";
+			this.вНПИПЦToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+			this.вНПИПЦToolStripMenuItem.Text = "ВНП/ИПЦ";
+			// 
+			// рассчетToolStripMenuItem
+			// 
+			this.рассчетToolStripMenuItem.Name = "рассчетToolStripMenuItem";
+			this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+			this.рассчетToolStripMenuItem.Text = "Рассчет";
+			this.рассчетToolStripMenuItem.Click += new System.EventHandler(this.рассчетToolStripMenuItem_Click);
+			// 
+			// графикToolStripMenuItem
+			// 
+			this.графикToolStripMenuItem.Name = "графикToolStripMenuItem";
+			this.графикToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+			this.графикToolStripMenuItem.Text = "График";
+			this.графикToolStripMenuItem.Click += new System.EventHandler(this.графикToolStripMenuItem_Click);
+			// 
+			// иПЦВНПToolStripMenuItem
+			// 
+			this.иПЦВНПToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.рассчетToolStripMenuItem1,
+            this.графикToolStripMenuItem1});
+			this.иПЦВНПToolStripMenuItem.Name = "иПЦВНПToolStripMenuItem";
+			this.иПЦВНПToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+			this.иПЦВНПToolStripMenuItem.Text = "ИПЦ/ВНП";
+			// 
+			// рассчетToolStripMenuItem1
+			// 
+			this.рассчетToolStripMenuItem1.Name = "рассчетToolStripMenuItem1";
+			this.рассчетToolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
+			this.рассчетToolStripMenuItem1.Text = "Рассчет";
+			this.рассчетToolStripMenuItem1.Click += new System.EventHandler(this.рассчетToolStripMenuItem1_Click);
+			// 
+			// графикToolStripMenuItem1
+			// 
+			this.графикToolStripMenuItem1.Name = "графикToolStripMenuItem1";
+			this.графикToolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
+			this.графикToolStripMenuItem1.Text = "График";
+			this.графикToolStripMenuItem1.Click += new System.EventHandler(this.графикToolStripMenuItem1_Click);
 			// 
 			// Lvrp
 			// 
@@ -664,19 +621,125 @@ namespace StatisticsAnalize
 			this.lalfa.TabIndex = 7;
 			this.lalfa.Text = ".";
 			// 
-			// рассчетDWToolStripMenuItem
+			// number
 			// 
-			this.рассчетDWToolStripMenuItem.Name = "рассчетDWToolStripMenuItem";
-			this.рассчетDWToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.рассчетDWToolStripMenuItem.Text = "Рассчет DW";
-			this.рассчетDWToolStripMenuItem.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem_Click);
+			this.number.HeaderText = "№";
+			this.number.MinimumWidth = 6;
+			this.number.Name = "number";
+			this.number.ReadOnly = true;
+			this.number.Width = 50;
 			// 
-			// рассчетDWToolStripMenuItem1
+			// dataGridViewTextBoxColumn1
 			// 
-			this.рассчетDWToolStripMenuItem1.Name = "рассчетDWToolStripMenuItem1";
-			this.рассчетDWToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-			this.рассчетDWToolStripMenuItem1.Text = "Рассчет DW";
-			this.рассчетDWToolStripMenuItem1.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem1_Click);
+			this.dataGridViewTextBoxColumn1.HeaderText = "Год";
+			this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Width = 125;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.HeaderText = "ВРП";
+			this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			this.dataGridViewTextBoxColumn2.Width = 125;
+			// 
+			// xsquare
+			// 
+			this.xsquare.HeaderText = "x^2";
+			this.xsquare.MinimumWidth = 6;
+			this.xsquare.Name = "xsquare";
+			this.xsquare.ReadOnly = true;
+			this.xsquare.Width = 125;
+			// 
+			// xy
+			// 
+			this.xy.HeaderText = "x*y";
+			this.xy.MinimumWidth = 6;
+			this.xy.Name = "xy";
+			this.xy.ReadOnly = true;
+			this.xy.Width = 125;
+			// 
+			// logx
+			// 
+			this.logx.HeaderText = "Ln(x)";
+			this.logx.MinimumWidth = 6;
+			this.logx.Name = "logx";
+			this.logx.ReadOnly = true;
+			this.logx.Width = 125;
+			// 
+			// logy
+			// 
+			this.logy.HeaderText = "ln(y)";
+			this.logy.MinimumWidth = 6;
+			this.logy.Name = "logy";
+			this.logy.ReadOnly = true;
+			this.logy.Width = 125;
+			// 
+			// lnxlny
+			// 
+			this.lnxlny.HeaderText = "ln(x)*ln(y)";
+			this.lnxlny.MinimumWidth = 6;
+			this.lnxlny.Name = "lnxlny";
+			this.lnxlny.ReadOnly = true;
+			this.lnxlny.Width = 125;
+			// 
+			// xlny
+			// 
+			this.xlny.HeaderText = "x*ln(y)";
+			this.xlny.MinimumWidth = 6;
+			this.xlny.Name = "xlny";
+			this.xlny.ReadOnly = true;
+			this.xlny.Width = 125;
+			// 
+			// yline
+			// 
+			this.yline.HeaderText = "Yi лин.";
+			this.yline.MinimumWidth = 6;
+			this.yline.Name = "yline";
+			this.yline.ReadOnly = true;
+			this.yline.Width = 125;
+			// 
+			// Yipokaz
+			// 
+			this.Yipokaz.HeaderText = "Yi пок.";
+			this.Yipokaz.MinimumWidth = 6;
+			this.Yipokaz.Name = "Yipokaz";
+			this.Yipokaz.ReadOnly = true;
+			this.Yipokaz.Width = 125;
+			// 
+			// Yistep
+			// 
+			this.Yistep.HeaderText = "Yi степ.";
+			this.Yistep.MinimumWidth = 6;
+			this.Yistep.Name = "Yistep";
+			this.Yistep.ReadOnly = true;
+			this.Yistep.Width = 125;
+			// 
+			// Ystr
+			// 
+			this.Ystr.HeaderText = "Yi с.т.р.";
+			this.Ystr.MinimumWidth = 6;
+			this.Ystr.Name = "Ystr";
+			this.Ystr.ReadOnly = true;
+			this.Ystr.Width = 125;
+			// 
+			// Ypss
+			// 
+			this.Ypss.HeaderText = "Yi п.с.с.";
+			this.Ypss.MinimumWidth = 6;
+			this.Ypss.Name = "Ypss";
+			this.Ypss.ReadOnly = true;
+			this.Ypss.Width = 125;
+			// 
+			// ESS
+			// 
+			this.ESS.HeaderText = "Yi э.с.с.";
+			this.ESS.MinimumWidth = 6;
+			this.ESS.Name = "ESS";
+			this.ESS.ReadOnly = true;
+			this.ESS.Width = 125;
 			// 
 			// Forms1
 			// 
@@ -721,21 +784,6 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.DataGridViewTextBoxColumn IPC;
 		private System.Windows.Forms.Label ldef;
 		private System.Windows.Forms.Label Lipc;
-		private System.Windows.Forms.DataGridViewTextBoxColumn number;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn xsquare;
-		private System.Windows.Forms.DataGridViewTextBoxColumn xy;
-		private System.Windows.Forms.DataGridViewTextBoxColumn logx;
-		private System.Windows.Forms.DataGridViewTextBoxColumn logy;
-		private System.Windows.Forms.DataGridViewTextBoxColumn lnxlny;
-		private System.Windows.Forms.DataGridViewTextBoxColumn xlny;
-		private System.Windows.Forms.DataGridViewTextBoxColumn yline;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Yipokaz;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Yistep;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Ystr;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Ypss;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ESS;
 		private System.Windows.Forms.DataGridView IPCdata;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -779,6 +827,28 @@ namespace StatisticsAnalize
 		public System.Windows.Forms.DataGridView VRPdata;
 		private System.Windows.Forms.ToolStripMenuItem рассчетDWToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem рассчетDWToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem парнаяРегрессияToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem вНПИПЦToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem рассчетToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem графикToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem иПЦВНПToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem рассчетToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem графикToolStripMenuItem1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn number;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn xsquare;
+		private System.Windows.Forms.DataGridViewTextBoxColumn xy;
+		private System.Windows.Forms.DataGridViewTextBoxColumn logx;
+		private System.Windows.Forms.DataGridViewTextBoxColumn logy;
+		private System.Windows.Forms.DataGridViewTextBoxColumn lnxlny;
+		private System.Windows.Forms.DataGridViewTextBoxColumn xlny;
+		private System.Windows.Forms.DataGridViewTextBoxColumn yline;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Yipokaz;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Yistep;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Ystr;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Ypss;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ESS;
 	}
 }
 

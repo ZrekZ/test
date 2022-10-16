@@ -12,10 +12,10 @@ namespace StatisticsAnalize
 {
 	public partial class Forms1 : Form
 	{
-		public int[] numbers = { 1,2,3,4,5,6,7,8,9,10,11,12};
+		static public int[] numbers = { 1,2,3,4,5,6,7,8,9,10,11,12};
 		static public int[] years = { 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 };
-		public double[] VRPs = { 539831.5, 623116.8, 840101.1, 860342.7, 880264.4, 974192.9, 1063780.3, 1147634.0, 1245826.9, 1422704.6, 1496401.4, 1403198.8 };
-		public double[] IPCs = { 110.2, 106.7, 107.3, 106.5, 110.4, 112.6, 105.4, 101.4, 103.8, 103.1, 104.5, 108.9 };
+		static public double[] VRPs = { 539831.5, 623116.8, 840101.1, 860342.7, 880264.4, 974192.9, 1063780.3, 1147634.0, 1245826.9, 1422704.6, 1496401.4, 1403198.8 };
+		static public double[] IPCs = { 110.2, 106.7, 107.3, 106.5, 110.4, 112.6, 105.4, 101.4, 103.8, 103.1, 104.5, 108.9 };
 		public Forms1()
 		{
 			InitializeComponent();
@@ -200,10 +200,10 @@ namespace StatisticsAnalize
 			IPCdata.Rows.Add(SumIpcCells(0), "-", SumIpcCells(2), SumIpcCells(3), SumIpcCells(4), SumIpcCells(5), SumIpcCells(6), SumIpcCells(7), SumIpcCells(8));
 			IPCdata.Rows[12].DefaultCellStyle.ForeColor = Color.Red;
 			IPCdata.Rows.Add();
-			IPCdata.Rows.Add(null, "Коэфиценты", "Стандартная ошибка", "t-статистика", null, "ta", "tb", "tтабл");
-			IPCdata.Rows.Add("Y-пересечение",1,1,1, null, 1, 1, 1);
-			IPCdata.Rows.Add("Переменная X1",1,1,1, null, "R^2", "Fp", "Ft");
-			IPCdata.Rows.Add(null,null,null,null,null,1,1,1);
+			IPCdata.Rows.Add(null, "Коэфиценты", "Стандартная ошибка", "t-статистика", null, "ta", "tb"/*, "tтабл"*/);
+			IPCdata.Rows.Add("Y-пересечение","109.249", "1,951", "55,995", null, "55,995", "-1,462"/*, "2,137"*/);
+			IPCdata.Rows.Add("Переменная X1","-0.387", "0,265", "-1,462", null, "R^2", "Fp"/*, "Ft"*/);
+			IPCdata.Rows.Add(null,null,null,null,null, "0,176", "2,137"/*, 1*/);
 		}
 
 		private void табличныйToolStripMenuItem_Click(object sender, EventArgs e)
@@ -261,19 +261,55 @@ namespace StatisticsAnalize
 			catch
 			{
 				MessageBox.Show("Откройте таблицу значений");
-			};
+			}
 		}
 
 		private void рассчетDWToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			DW_VRP form = new DW_VRP();
-			form.ShowDialog();
+			try
+			{
+				DW_VRP form = new DW_VRP(arrayCellsVRP(11));
+				form.ShowDialog();
+			}
+			catch
+			{
+				MessageBox.Show("Откройте таблицу значений");
+			}
 		}
 
 		private void рассчетDWToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-			DW_IPC form = new DW_IPC();
+			try
+			{
+				DW_IPC form = new DW_IPC(arrayCellsIPC(11));
+				form.ShowDialog();
+			}
+			catch
+			{
+				MessageBox.Show("Откройте таблицу значений");
+			}
+		}
+
+		private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			VRPtoIPC form = new VRPtoIPC();
 			form.ShowDialog();
+		}
+
+		private void рассчетToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			IPCtoVRP form = new IPCtoVRP();
+			form.ShowDialog();
+		}
+
+		private void графикToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Откройте файл excel");
+		}
+
+		private void графикToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Откройте файл excel");
 		}
 	}
 }

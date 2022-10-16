@@ -14,10 +14,19 @@ namespace StatisticsAnalize
 		[STAThread]
 		static void Main()
 		{
-			Application.SetHighDpiMode(HighDpiMode.SystemAware);
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Forms1());
+			try
+			{
+				Application.SetHighDpiMode(HighDpiMode.SystemAware);
+				Application.EnableVisualStyles();
+				Application.SetCompatibleTextRenderingDefault(false);
+				Application.Run(new Forms1());
+			}
+			catch(Exception er)
+			{
+				//MessageBox.Show(""+er);
+				Application.Restart();
+			}
+			
 		}
 	}
 }
