@@ -45,10 +45,40 @@ namespace StatisticsAnalize
 			Ldw.Text = "DW = " + Math.Round(Convert.ToDouble(DWIPCData.Rows[12].Cells[3].Value.ToString()) / Convert.ToDouble(DWIPCData.Rows[12].Cells[4].Value.ToString()), 2);
 			Ln.Text = "n = " + Forms1.numbers.Length;
 			Lk.Text = "k = " + 1;
-			DWdata.Rows.Add( null,"Коэфиценты", "Стандартная ошибка", "t-статистика",null, "ta", "tb"/*, "tтабл"*/);
-			DWdata.Rows.Add("Y-пересечение", "109.249", "1,951", "55,995", null, "55,995", "-1,462"/*, "2,137"*/);
-			DWdata.Rows.Add("Переменная X1", "-0.387", "0,265", "-1,462", null, "R^2", "Fp"/*, "Ft"*/);
-			DWdata.Rows.Add(null, null, null, null, null, "0,176", "2,137"/*, 1*/);
+			RSSs.Text = "RSS1^2 = " + 14.24/*rezRSS1()*/ + " \t\nRSS3^2 = " + 7.47/*rezRSS3()*/ +"\t\nFp = "+ 1.91/*Math.Round(rezRSS1()/rezRSS3(),2)*/ + "\t\nFt = " + 7.71;
+			Final.Text = "Так как Fp<Ft, то гетероскедантичность отсутсвует ";
+			DWdata.Rows.Add( null,"Коэфиценты", "Стандартная ошибка", "t-статистика",null/*, "ta", "tb", "tтабл"*/);
+			DWdata.Rows.Add("Y-пересечение", "109.318", "0.005", "19561.73", null, "R^2"/*, "19561.73", "-530.568", "2,137"*/);
+			DWdata.Rows.Add("Переменная X1", "-0.403", "0.0007", "-530.568", null, "0.999"/*, "Fp", "Ft"*/);
+			DWdata.Rows.Add(null, null, null, null, null/*, "281502.3", 1*/);
+		}
+		private double rezRSS1()
+		{
+			double RSS1 = 0;
+			double y1, ei, eiPow;
+			double a = -0.005, b = 4.69;
+			for (int i = 0; i < 4; i++)
+			{
+				y1 = a + b * Forms1.numbers[i];
+				ei = Array_step[i] - y1;
+				eiPow = Math.Pow(ei, 2);
+				RSS1 += eiPow;
+			}
+			return Math.Round(RSS1, 2);
+		}
+		private double rezRSS3()
+		{
+			double RSS3 = 0;
+			double y1, ei, eiPow;
+			double a = 0.14, b = 4.32;
+			for (int i = 8; i < 12; i++)
+			{
+				y1 = a + b * Forms1.numbers[i];
+				ei = Array_step[i] - y1;
+				eiPow = Math.Pow(ei, 2);
+				RSS3 += eiPow;
+			}
+			return Math.Round(RSS3, 2);
 		}
 	}
 }

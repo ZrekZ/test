@@ -46,6 +46,8 @@ namespace StatisticsAnalize
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.RSSs = new System.Windows.Forms.Label();
+			this.Final = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.DWIPCData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.DWdata)).BeginInit();
 			this.SuspendLayout();
@@ -123,7 +125,7 @@ namespace StatisticsAnalize
 			// Ln
 			// 
 			this.Ln.AutoSize = true;
-			this.Ln.Location = new System.Drawing.Point(28, 471);
+			this.Ln.Location = new System.Drawing.Point(28, 451);
 			this.Ln.Name = "Ln";
 			this.Ln.Size = new System.Drawing.Size(12, 20);
 			this.Ln.TabIndex = 1;
@@ -132,7 +134,7 @@ namespace StatisticsAnalize
 			// Lk
 			// 
 			this.Lk.AutoSize = true;
-			this.Lk.Location = new System.Drawing.Point(28, 507);
+			this.Lk.Location = new System.Drawing.Point(28, 471);
 			this.Lk.Name = "Lk";
 			this.Lk.Size = new System.Drawing.Size(12, 20);
 			this.Lk.TabIndex = 1;
@@ -217,11 +219,32 @@ namespace StatisticsAnalize
 			this.Column7.Name = "Column7";
 			this.Column7.ReadOnly = true;
 			// 
+			// RSSs
+			// 
+			this.RSSs.AutoSize = true;
+			this.RSSs.Location = new System.Drawing.Point(279, 431);
+			this.RSSs.Name = "RSSs";
+			this.RSSs.Size = new System.Drawing.Size(12, 20);
+			this.RSSs.TabIndex = 5;
+			this.RSSs.Text = ".";
+			// 
+			// Final
+			// 
+			this.Final.AutoSize = true;
+			this.Final.Location = new System.Drawing.Point(28, 515);
+			this.Final.Name = "Final";
+			this.Final.Size = new System.Drawing.Size(12, 20);
+			this.Final.TabIndex = 6;
+			this.Final.Text = ".";
+			// 
 			// DW_IPC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(602, 710);
+			this.AutoScroll = true;
+			this.ClientSize = new System.Drawing.Size(602, 716);
+			this.Controls.Add(this.Final);
+			this.Controls.Add(this.RSSs);
 			this.Controls.Add(this.DWdata);
 			this.Controls.Add(this.Lk);
 			this.Controls.Add(this.Ln);
@@ -255,5 +278,7 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+		private System.Windows.Forms.Label RSSs;
+		private System.Windows.Forms.Label Final;
 	}
 }
