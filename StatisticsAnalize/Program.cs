@@ -21,7 +21,7 @@ namespace StatisticsAnalize
 				Application.SetCompatibleTextRenderingDefault(false);
 				Application.Run(new Forms1());
 			}
-			catch(Exception er)
+			catch//(Exception er)
 			{
 				//MessageBox.Show(""+er);
 				Application.Restart();

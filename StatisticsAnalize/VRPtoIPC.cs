@@ -20,12 +20,16 @@ namespace StatisticsAnalize
 		}
 		private void FillForm()
 		{
+			double a = 113.2213;
+			A.Text = "A = " + a;
+			double b = -0.000007;
+			B.Text = "B = " + b;
 			for (int i = 1; i < Forms1.years.Length - 1; i++)
 			{
-				VRPtoIPCData.Rows.Add(Forms1.VRPs[i], Forms1.IPCs[i], Math.Round(Math.Pow(Forms1.VRPs[i], 2), 2), Math.Round(Forms1.IPCs[i] * Forms1.VRPs[i], 2), null, Forms1.VRPs[i]);
+				VRPtoIPCData.Rows.Add(Forms1.VRPs[i], Forms1.IPCs[i], Math.Round(Math.Pow(Forms1.VRPs[i], 2), 2), Math.Round(Forms1.IPCs[i] * Forms1.VRPs[i], 2), null, Forms1.VRPs[i],Math.Round((b*Forms1.VRPs[i]+a),2));
 
 			}
-			VRPtoIPCData.Rows.Add(SumCells(0), SumCells(1), SumCells(2), SumCells(3), null, SumCells(5));
+			VRPtoIPCData.Rows.Add(SumCells(0), SumCells(1), SumCells(2), SumCells(3), null, SumCells(5),SumCells(6));
 			VRPtoIPCData.Rows[10].DefaultCellStyle.ForeColor = Color.Red;
 		}
 

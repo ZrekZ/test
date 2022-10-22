@@ -100,6 +100,8 @@ namespace StatisticsAnalize
 			this.lbstep = new System.Windows.Forms.Label();
 			this.lt = new System.Windows.Forms.Label();
 			this.lalfa = new System.Windows.Forms.Label();
+			this.прогнозToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.прогнозToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.DefData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VRPdata)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.IPCdata)).BeginInit();
@@ -516,7 +518,8 @@ namespace StatisticsAnalize
 			this.валовойПродуктToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.форматToolStripMenuItem1,
             this.gToolStripMenuItem,
-            this.рассчетDWToolStripMenuItem});
+            this.рассчетDWToolStripMenuItem,
+            this.прогнозToolStripMenuItem});
 			this.валовойПродуктToolStripMenuItem.Name = "валовойПродуктToolStripMenuItem";
 			this.валовойПродуктToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
 			this.валовойПродуктToolStripMenuItem.Text = "Валовой продукт";
@@ -527,7 +530,7 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem1,
             this.графическийToolStripMenuItem1});
 			this.форматToolStripMenuItem1.Name = "форматToolStripMenuItem1";
-			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
 			this.форматToolStripMenuItem1.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem1
@@ -547,14 +550,14 @@ namespace StatisticsAnalize
 			// gToolStripMenuItem
 			// 
 			this.gToolStripMenuItem.Name = "gToolStripMenuItem";
-			this.gToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+			this.gToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.gToolStripMenuItem.Text = "Рассчет G";
 			this.gToolStripMenuItem.Click += new System.EventHandler(this.gToolStripMenuItem_Click);
 			// 
 			// рассчетDWToolStripMenuItem
 			// 
 			this.рассчетDWToolStripMenuItem.Name = "рассчетDWToolStripMenuItem";
-			this.рассчетDWToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+			this.рассчетDWToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.рассчетDWToolStripMenuItem.Text = "Рассчет DW";
 			this.рассчетDWToolStripMenuItem.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem_Click);
 			// 
@@ -563,7 +566,8 @@ namespace StatisticsAnalize
 			this.индексЦенToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.форматToolStripMenuItem2,
             this.gToolStripMenuItem1,
-            this.рассчетDWToolStripMenuItem1});
+            this.рассчетDWToolStripMenuItem1,
+            this.прогнозToolStripMenuItem1});
 			this.индексЦенToolStripMenuItem.Name = "индексЦенToolStripMenuItem";
 			this.индексЦенToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
 			this.индексЦенToolStripMenuItem.Text = "Индекс цен";
@@ -574,7 +578,7 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem2,
             this.графическийToolStripMenuItem2});
 			this.форматToolStripMenuItem2.Name = "форматToolStripMenuItem2";
-			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(173, 26);
+			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
 			this.форматToolStripMenuItem2.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem2
@@ -594,14 +598,14 @@ namespace StatisticsAnalize
 			// gToolStripMenuItem1
 			// 
 			this.gToolStripMenuItem1.Name = "gToolStripMenuItem1";
-			this.gToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+			this.gToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
 			this.gToolStripMenuItem1.Text = "Рассчет G";
 			this.gToolStripMenuItem1.Click += new System.EventHandler(this.gToolStripMenuItem1_Click);
 			// 
 			// рассчетDWToolStripMenuItem1
 			// 
 			this.рассчетDWToolStripMenuItem1.Name = "рассчетDWToolStripMenuItem1";
-			this.рассчетDWToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+			this.рассчетDWToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
 			this.рассчетDWToolStripMenuItem1.Text = "Рассчет DW";
 			this.рассчетDWToolStripMenuItem1.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem1_Click);
 			// 
@@ -741,6 +745,20 @@ namespace StatisticsAnalize
 			this.lalfa.TabIndex = 7;
 			this.lalfa.Text = ".";
 			// 
+			// прогнозToolStripMenuItem
+			// 
+			this.прогнозToolStripMenuItem.Name = "прогнозToolStripMenuItem";
+			this.прогнозToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.прогнозToolStripMenuItem.Text = "Прогноз";
+			this.прогнозToolStripMenuItem.Click += new System.EventHandler(this.прогнозToolStripMenuItem_Click);
+			// 
+			// прогнозToolStripMenuItem1
+			// 
+			this.прогнозToolStripMenuItem1.Name = "прогнозToolStripMenuItem1";
+			this.прогнозToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.прогнозToolStripMenuItem1.Text = "Прогноз";
+			this.прогнозToolStripMenuItem1.Click += new System.EventHandler(this.прогнозToolStripMenuItem1_Click);
+			// 
 			// Forms1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -851,6 +869,8 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.DataGridViewTextBoxColumn Ystr;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Ypss;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ESS;
+		private System.Windows.Forms.ToolStripMenuItem прогнозToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem прогнозToolStripMenuItem1;
 	}
 }
 

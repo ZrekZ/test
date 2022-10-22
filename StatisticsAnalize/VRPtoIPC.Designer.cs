@@ -41,6 +41,8 @@ namespace StatisticsAnalize
 			this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.A = new System.Windows.Forms.Label();
+			this.B = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.VRPtoIPCData)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -151,6 +153,24 @@ namespace StatisticsAnalize
 			this.Column11.Name = "Column11";
 			this.Column11.ReadOnly = true;
 			// 
+			// A
+			// 
+			this.A.AutoSize = true;
+			this.A.Location = new System.Drawing.Point(12, 400);
+			this.A.Name = "A";
+			this.A.Size = new System.Drawing.Size(12, 20);
+			this.A.TabIndex = 1;
+			this.A.Text = ".";
+			// 
+			// B
+			// 
+			this.B.AutoSize = true;
+			this.B.Location = new System.Drawing.Point(12, 433);
+			this.B.Name = "B";
+			this.B.Size = new System.Drawing.Size(12, 20);
+			this.B.TabIndex = 1;
+			this.B.Text = ".";
+			// 
 			// VRPtoIPC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -158,11 +178,14 @@ namespace StatisticsAnalize
 			this.AutoScroll = true;
 			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(1082, 503);
+			this.Controls.Add(this.B);
+			this.Controls.Add(this.A);
 			this.Controls.Add(this.VRPtoIPCData);
 			this.Name = "VRPtoIPC";
 			this.Text = "VRPtoIPC";
 			((System.ComponentModel.ISupportInitialize)(this.VRPtoIPCData)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -179,5 +202,7 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+		private System.Windows.Forms.Label A;
+		private System.Windows.Forms.Label B;
 	}
 }

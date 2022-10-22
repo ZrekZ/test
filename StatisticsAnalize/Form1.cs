@@ -311,5 +311,17 @@ namespace StatisticsAnalize
 		{
 			MessageBox.Show("Откройте файл excel");
 		}
+
+		private void прогнозToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FutureVRP form = new FutureVRP();
+			form.ShowDialog();
+		}
+
+		private void прогнозToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			FutureIPC form = new FutureIPC();
+			form.ShowDialog();
+		}
 	}
 }
