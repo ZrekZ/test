@@ -33,6 +33,7 @@ namespace StatisticsAnalize
 			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ipc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -46,13 +47,12 @@ namespace StatisticsAnalize
             this.number,
             this.year,
             this.ipc});
-			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 29;
-			this.dataGridView1.Size = new System.Drawing.Size(800, 582);
+			this.dataGridView1.Size = new System.Drawing.Size(800, 526);
 			this.dataGridView1.TabIndex = 0;
 			// 
 			// number
@@ -79,16 +79,27 @@ namespace StatisticsAnalize
 			this.ipc.Name = "ipc";
 			this.ipc.ReadOnly = true;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(13, 545);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(50, 20);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "label1";
+			// 
 			// FutureIPC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 582);
+			this.ClientSize = new System.Drawing.Size(800, 633);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "FutureIPC";
 			this.Text = "FutureIPC";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -98,5 +109,6 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.DataGridViewTextBoxColumn number;
 		private System.Windows.Forms.DataGridViewTextBoxColumn year;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ipc;
+		private System.Windows.Forms.Label label1;
 	}
 }

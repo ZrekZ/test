@@ -23,7 +23,7 @@ namespace StatisticsAnalize
 			}
 			catch//(Exception er)
 			{
-				//MessageBox.Show(""+er);
+				MessageBox.Show("Произошла непредвиденная ошибка!");
 				Application.Restart();
 			}
 			

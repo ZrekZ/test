@@ -78,12 +78,16 @@ namespace StatisticsAnalize
 			this.графическийToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.gToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.рассчетDWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.прогнозToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.динамическаяМодельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.индексЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.форматToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.табличныйToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.графическийToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.gToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.рассчетDWToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.прогнозToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.динамическаяМодельToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.парнаяРегрессияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.вНПИПЦToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.рассчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,8 +104,7 @@ namespace StatisticsAnalize
 			this.lbstep = new System.Windows.Forms.Label();
 			this.lt = new System.Windows.Forms.Label();
 			this.lalfa = new System.Windows.Forms.Label();
-			this.прогнозToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.прогнозToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.авторегрессияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.DefData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VRPdata)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.IPCdata)).BeginInit();
@@ -169,12 +172,12 @@ namespace StatisticsAnalize
             this.Ystr,
             this.Ypss,
             this.ESS});
-			this.VRPdata.Location = new System.Drawing.Point(0, 92);
+			this.VRPdata.Location = new System.Drawing.Point(0, 90);
 			this.VRPdata.Name = "VRPdata";
 			this.VRPdata.ReadOnly = true;
 			this.VRPdata.RowHeadersWidth = 51;
 			this.VRPdata.RowTemplate.Height = 29;
-			this.VRPdata.Size = new System.Drawing.Size(1818, 411);
+			this.VRPdata.Size = new System.Drawing.Size(1818, 557);
 			this.VRPdata.TabIndex = 1;
 			// 
 			// number
@@ -344,7 +347,7 @@ namespace StatisticsAnalize
 			this.IPCdata.ReadOnly = true;
 			this.IPCdata.RowHeadersWidth = 51;
 			this.IPCdata.RowTemplate.Height = 29;
-			this.IPCdata.Size = new System.Drawing.Size(1815, 413);
+			this.IPCdata.Size = new System.Drawing.Size(1815, 557);
 			this.IPCdata.TabIndex = 2;
 			// 
 			// dataGridViewTextBoxColumn3
@@ -475,7 +478,8 @@ namespace StatisticsAnalize
             this.статистикаПоказателейToolStripMenuItem,
             this.валовойПродуктToolStripMenuItem,
             this.индексЦенToolStripMenuItem,
-            this.парнаяРегрессияToolStripMenuItem});
+            this.парнаяРегрессияToolStripMenuItem,
+            this.авторегрессияToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(1898, 28);
@@ -519,7 +523,8 @@ namespace StatisticsAnalize
             this.форматToolStripMenuItem1,
             this.gToolStripMenuItem,
             this.рассчетDWToolStripMenuItem,
-            this.прогнозToolStripMenuItem});
+            this.прогнозToolStripMenuItem,
+            this.динамическаяМодельToolStripMenuItem});
 			this.валовойПродуктToolStripMenuItem.Name = "валовойПродуктToolStripMenuItem";
 			this.валовойПродуктToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
 			this.валовойПродуктToolStripMenuItem.Text = "Валовой продукт";
@@ -530,7 +535,7 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem1,
             this.графическийToolStripMenuItem1});
 			this.форматToolStripMenuItem1.Name = "форматToolStripMenuItem1";
-			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.форматToolStripMenuItem1.Size = new System.Drawing.Size(250, 26);
 			this.форматToolStripMenuItem1.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem1
@@ -550,16 +555,30 @@ namespace StatisticsAnalize
 			// gToolStripMenuItem
 			// 
 			this.gToolStripMenuItem.Name = "gToolStripMenuItem";
-			this.gToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.gToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
 			this.gToolStripMenuItem.Text = "Рассчет G";
 			this.gToolStripMenuItem.Click += new System.EventHandler(this.gToolStripMenuItem_Click);
 			// 
 			// рассчетDWToolStripMenuItem
 			// 
 			this.рассчетDWToolStripMenuItem.Name = "рассчетDWToolStripMenuItem";
-			this.рассчетDWToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.рассчетDWToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
 			this.рассчетDWToolStripMenuItem.Text = "Рассчет DW";
 			this.рассчетDWToolStripMenuItem.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem_Click);
+			// 
+			// прогнозToolStripMenuItem
+			// 
+			this.прогнозToolStripMenuItem.Name = "прогнозToolStripMenuItem";
+			this.прогнозToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
+			this.прогнозToolStripMenuItem.Text = "Прогноз";
+			this.прогнозToolStripMenuItem.Click += new System.EventHandler(this.прогнозToolStripMenuItem_Click);
+			// 
+			// динамическаяМодельToolStripMenuItem
+			// 
+			this.динамическаяМодельToolStripMenuItem.Name = "динамическаяМодельToolStripMenuItem";
+			this.динамическаяМодельToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
+			this.динамическаяМодельToolStripMenuItem.Text = "Динамическая модель";
+			this.динамическаяМодельToolStripMenuItem.Click += new System.EventHandler(this.динамическаяМодельToolStripMenuItem_Click);
 			// 
 			// индексЦенToolStripMenuItem
 			// 
@@ -567,7 +586,8 @@ namespace StatisticsAnalize
             this.форматToolStripMenuItem2,
             this.gToolStripMenuItem1,
             this.рассчетDWToolStripMenuItem1,
-            this.прогнозToolStripMenuItem1});
+            this.прогнозToolStripMenuItem1,
+            this.динамическаяМодельToolStripMenuItem1});
 			this.индексЦенToolStripMenuItem.Name = "индексЦенToolStripMenuItem";
 			this.индексЦенToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
 			this.индексЦенToolStripMenuItem.Text = "Индекс цен";
@@ -578,7 +598,7 @@ namespace StatisticsAnalize
             this.табличныйToolStripMenuItem2,
             this.графическийToolStripMenuItem2});
 			this.форматToolStripMenuItem2.Name = "форматToolStripMenuItem2";
-			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+			this.форматToolStripMenuItem2.Size = new System.Drawing.Size(250, 26);
 			this.форматToolStripMenuItem2.Text = "формат";
 			// 
 			// табличныйToolStripMenuItem2
@@ -598,16 +618,30 @@ namespace StatisticsAnalize
 			// gToolStripMenuItem1
 			// 
 			this.gToolStripMenuItem1.Name = "gToolStripMenuItem1";
-			this.gToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.gToolStripMenuItem1.Size = new System.Drawing.Size(250, 26);
 			this.gToolStripMenuItem1.Text = "Рассчет G";
 			this.gToolStripMenuItem1.Click += new System.EventHandler(this.gToolStripMenuItem1_Click);
 			// 
 			// рассчетDWToolStripMenuItem1
 			// 
 			this.рассчетDWToolStripMenuItem1.Name = "рассчетDWToolStripMenuItem1";
-			this.рассчетDWToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+			this.рассчетDWToolStripMenuItem1.Size = new System.Drawing.Size(250, 26);
 			this.рассчетDWToolStripMenuItem1.Text = "Рассчет DW";
 			this.рассчетDWToolStripMenuItem1.Click += new System.EventHandler(this.рассчетDWToolStripMenuItem1_Click);
+			// 
+			// прогнозToolStripMenuItem1
+			// 
+			this.прогнозToolStripMenuItem1.Name = "прогнозToolStripMenuItem1";
+			this.прогнозToolStripMenuItem1.Size = new System.Drawing.Size(250, 26);
+			this.прогнозToolStripMenuItem1.Text = "Прогноз";
+			this.прогнозToolStripMenuItem1.Click += new System.EventHandler(this.прогнозToolStripMenuItem1_Click);
+			// 
+			// динамическаяМодельToolStripMenuItem1
+			// 
+			this.динамическаяМодельToolStripMenuItem1.Name = "динамическаяМодельToolStripMenuItem1";
+			this.динамическаяМодельToolStripMenuItem1.Size = new System.Drawing.Size(250, 26);
+			this.динамическаяМодельToolStripMenuItem1.Text = "Динамическая модель";
+			this.динамическаяМодельToolStripMenuItem1.Click += new System.EventHandler(this.динамическаяМодельToolStripMenuItem1_Click);
 			// 
 			// парнаяРегрессияToolStripMenuItem
 			// 
@@ -676,7 +710,7 @@ namespace StatisticsAnalize
 			// lalin
 			// 
 			this.lalin.AutoSize = true;
-			this.lalin.Location = new System.Drawing.Point(13, 524);
+			this.lalin.Location = new System.Drawing.Point(14, 686);
 			this.lalin.Name = "lalin";
 			this.lalin.Size = new System.Drawing.Size(12, 20);
 			this.lalin.TabIndex = 6;
@@ -685,7 +719,7 @@ namespace StatisticsAnalize
 			// lblin
 			// 
 			this.lblin.AutoSize = true;
-			this.lblin.Location = new System.Drawing.Point(13, 555);
+			this.lblin.Location = new System.Drawing.Point(14, 717);
 			this.lblin.Name = "lblin";
 			this.lblin.Size = new System.Drawing.Size(12, 20);
 			this.lblin.TabIndex = 6;
@@ -694,7 +728,7 @@ namespace StatisticsAnalize
 			// lapokaz
 			// 
 			this.lapokaz.AutoSize = true;
-			this.lapokaz.Location = new System.Drawing.Point(251, 524);
+			this.lapokaz.Location = new System.Drawing.Point(252, 686);
 			this.lapokaz.Name = "lapokaz";
 			this.lapokaz.Size = new System.Drawing.Size(12, 20);
 			this.lapokaz.TabIndex = 6;
@@ -703,7 +737,7 @@ namespace StatisticsAnalize
 			// lbpokaz
 			// 
 			this.lbpokaz.AutoSize = true;
-			this.lbpokaz.Location = new System.Drawing.Point(251, 555);
+			this.lbpokaz.Location = new System.Drawing.Point(252, 717);
 			this.lbpokaz.Name = "lbpokaz";
 			this.lbpokaz.Size = new System.Drawing.Size(12, 20);
 			this.lbpokaz.TabIndex = 6;
@@ -712,7 +746,7 @@ namespace StatisticsAnalize
 			// lastep
 			// 
 			this.lastep.AutoSize = true;
-			this.lastep.Location = new System.Drawing.Point(490, 524);
+			this.lastep.Location = new System.Drawing.Point(491, 686);
 			this.lastep.Name = "lastep";
 			this.lastep.Size = new System.Drawing.Size(12, 20);
 			this.lastep.TabIndex = 6;
@@ -721,7 +755,7 @@ namespace StatisticsAnalize
 			// lbstep
 			// 
 			this.lbstep.AutoSize = true;
-			this.lbstep.Location = new System.Drawing.Point(490, 555);
+			this.lbstep.Location = new System.Drawing.Point(491, 717);
 			this.lbstep.Name = "lbstep";
 			this.lbstep.Size = new System.Drawing.Size(12, 20);
 			this.lbstep.TabIndex = 6;
@@ -730,7 +764,7 @@ namespace StatisticsAnalize
 			// lt
 			// 
 			this.lt.AutoSize = true;
-			this.lt.Location = new System.Drawing.Point(13, 594);
+			this.lt.Location = new System.Drawing.Point(14, 756);
 			this.lt.Name = "lt";
 			this.lt.Size = new System.Drawing.Size(12, 20);
 			this.lt.TabIndex = 7;
@@ -739,25 +773,18 @@ namespace StatisticsAnalize
 			// lalfa
 			// 
 			this.lalfa.AutoSize = true;
-			this.lalfa.Location = new System.Drawing.Point(251, 594);
+			this.lalfa.Location = new System.Drawing.Point(252, 756);
 			this.lalfa.Name = "lalfa";
 			this.lalfa.Size = new System.Drawing.Size(12, 20);
 			this.lalfa.TabIndex = 7;
 			this.lalfa.Text = ".";
 			// 
-			// прогнозToolStripMenuItem
+			// авторегрессияToolStripMenuItem
 			// 
-			this.прогнозToolStripMenuItem.Name = "прогнозToolStripMenuItem";
-			this.прогнозToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.прогнозToolStripMenuItem.Text = "Прогноз";
-			this.прогнозToolStripMenuItem.Click += new System.EventHandler(this.прогнозToolStripMenuItem_Click);
-			// 
-			// прогнозToolStripMenuItem1
-			// 
-			this.прогнозToolStripMenuItem1.Name = "прогнозToolStripMenuItem1";
-			this.прогнозToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-			this.прогнозToolStripMenuItem1.Text = "Прогноз";
-			this.прогнозToolStripMenuItem1.Click += new System.EventHandler(this.прогнозToolStripMenuItem1_Click);
+			this.авторегрессияToolStripMenuItem.Name = "авторегрессияToolStripMenuItem";
+			this.авторегрессияToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+			this.авторегрессияToolStripMenuItem.Text = "Авторегрессия";
+			this.авторегрессияToolStripMenuItem.Click += new System.EventHandler(this.авторегрессияToolStripMenuItem_Click);
 			// 
 			// Forms1
 			// 
@@ -766,7 +793,7 @@ namespace StatisticsAnalize
 			this.AutoScroll = true;
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.SystemColors.ButtonFace;
-			this.ClientSize = new System.Drawing.Size(1898, 680);
+			this.ClientSize = new System.Drawing.Size(1898, 821);
 			this.Controls.Add(this.Lvrp);
 			this.Controls.Add(this.lalfa);
 			this.Controls.Add(this.lt);
@@ -871,6 +898,9 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.DataGridViewTextBoxColumn ESS;
 		private System.Windows.Forms.ToolStripMenuItem прогнозToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem прогнозToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem динамическаяМодельToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem динамическаяМодельToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem авторегрессияToolStripMenuItem;
 	}
 }
 

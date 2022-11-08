@@ -31,6 +31,7 @@ namespace StatisticsAnalize
 			{
 				dataGridView1.Rows.Add(i, yearlastonpresent += 1, Math.Round(AForLin + BForLin * i, 2));
 			}
+			label1.Text = $"y = a + b*x\t  \na*12+b*78=1280.8 \t a = {AForLin}\na*78 + b*650=8269.6 \t b={BForLin}";
 		}
 	}
 }

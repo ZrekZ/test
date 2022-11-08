@@ -48,6 +48,7 @@ namespace StatisticsAnalize
 			this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.RSSs = new System.Windows.Forms.Label();
 			this.Final = new System.Windows.Forms.Label();
+			this.ab = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.DWIPCData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.DWdata)).BeginInit();
 			this.SuspendLayout();
@@ -222,7 +223,7 @@ namespace StatisticsAnalize
 			// RSSs
 			// 
 			this.RSSs.AutoSize = true;
-			this.RSSs.Location = new System.Drawing.Point(279, 431);
+			this.RSSs.Location = new System.Drawing.Point(606, 431);
 			this.RSSs.Name = "RSSs";
 			this.RSSs.Size = new System.Drawing.Size(12, 20);
 			this.RSSs.TabIndex = 5;
@@ -237,13 +238,23 @@ namespace StatisticsAnalize
 			this.Final.TabIndex = 6;
 			this.Final.Text = ".";
 			// 
+			// ab
+			// 
+			this.ab.AutoSize = true;
+			this.ab.Location = new System.Drawing.Point(606, 9);
+			this.ab.Name = "ab";
+			this.ab.Size = new System.Drawing.Size(12, 20);
+			this.ab.TabIndex = 7;
+			this.ab.Text = ".";
+			// 
 			// DW_IPC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(602, 716);
+			this.ClientSize = new System.Drawing.Size(920, 716);
+			this.Controls.Add(this.ab);
 			this.Controls.Add(this.Final);
 			this.Controls.Add(this.RSSs);
 			this.Controls.Add(this.DWdata);
@@ -281,5 +292,6 @@ namespace StatisticsAnalize
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
 		private System.Windows.Forms.Label RSSs;
 		private System.Windows.Forms.Label Final;
+		private System.Windows.Forms.Label ab;
 	}
 }

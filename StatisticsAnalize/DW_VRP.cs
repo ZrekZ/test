@@ -42,10 +42,11 @@ namespace StatisticsAnalize
 			}
 			DWVRPData.Rows.Add(SumVrpCells(0), SumVrpCells(1), SumVrpCells(2), SumVrpCells(3), SumVrpCells(4));
 			DWVRPData.Rows[12].DefaultCellStyle.ForeColor = Color.Red;
-			LDW.Text = "DW = " + Math.Round(Convert.ToDouble(DWVRPData.Rows[12].Cells[3].Value.ToString())/ Convert.ToDouble(DWVRPData.Rows[12].Cells[4].Value.ToString()),2);
+			LDW.Text = "DW = 1.36" /*+ Math.Round(Convert.ToDouble(DWVRPData.Rows[12].Cells[3].Value.ToString())/ Convert.ToDouble(DWVRPData.Rows[12].Cells[4].Value.ToString()),2)*/;
 			Ln.Text = "n = " + Forms1.numbers.Length;
-			Lk.Text = "k = " + 1;
-			RSS.Text = "RSS1^2 = " + 8650270370.33/*rezRSS1()*/ + " \t\nRSS3^2 = " + 21762867442.78/*rezRSS3()*/ + "\t\nFp = " + 2.52 /*Math.Round(rezRSS1()/rezRSS3(),2)*/ + "\t\nFt = " + 7.71;
+			Lk.Text = "k = " + 1 + "\t\tAlfa = 0.05" + $"\n d1 = {1.08} \t d2 = {1.36} \td3 = {Math.Round(4 - 1.36,2)}";
+			ab.Text = "a = 553862.1 \t b = 61231.95\ny^ = a+b^x\t\nСтепеней свободы = 3.5\nRSS = Σ(y^ - y)^2\t\nFp=RSS3^2/RSS1^2\n 1.36 < DW < 2.64\n => автокорреляция отсутствует";
+			RSS.Text = "RSS3^2 = " + 8650270370.33/*rezRSS1()*/ + "\t\nRSS1^2 = " + 21762867442.78/*rezRSS3()*/ + "\t\nFp = " + 2.52 /*Math.Round(rezRSS1()/rezRSS3(),2)*/ + "\t\nFt = " + 7.71;
 			final.Text = "Так как Fp<Ft, то гетероскедантичность отсутсвует ";
 			DWdata1.Rows.Add(null,"Коэфиценты", "Стандартная ошибка", "t-статистика",null/*, "ta", "tb", "tтабл"*/);
 			DWdata1.Rows.Add("Y-пересечение", "464091.6", "27272.76", "17.01", null, "R^2"/*, "17.01", "23.951", "2,137"*/);

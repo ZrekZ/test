@@ -323,5 +323,23 @@ namespace StatisticsAnalize
 			FutureIPC form = new FutureIPC();
 			form.ShowDialog();
 		}
+
+		private void динамическаяМодельToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			DinamicVRP form = new DinamicVRP();
+			form.ShowDialog();
+		}
+
+		private void динамическаяМодельToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			DinamicIPC form = new DinamicIPC();
+			form.ShowDialog();
+		}
+
+		private void авторегрессияToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			AutoRegress form = new AutoRegress();
+			form.ShowDialog();
+		}
 	}
 }
