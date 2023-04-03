@@ -45,16 +45,16 @@ namespace StatisticsAnalize
 			double b = 0.893059332;
 			for (int i = 0; i < Forms1.years.Length; i++)
 			{
-				DinamicVRPData.Rows.Add(Forms1.numbers[i],Forms1.years[i], Forms1.VRPs[i], i==0? 0 : Forms1.VRPs[i-1], i==0? 0 : Math.Round(a+b*Forms1.VRPs[i-1],2),i==0? 0 :  Math.Round(Math.Round(a + b * Forms1.VRPs[i - 1], 2) - Forms1.VRPs[i],2));
+				DinamicVRPData.Rows.Add(i == 0 ? 0 : Forms1.numbers[i], i == 0 ? 0 : Forms1.years[i], i == 0 ? 0 : Forms1.VRPs[i], i==0? 0 : Forms1.VRPs[i-1], i==0? 0 : Math.Round(a+b*Forms1.VRPs[i-1],2),i==0? 0 :  Math.Round(Math.Round(a + b * Forms1.VRPs[i - 1], 2) - Forms1.VRPs[i],2));
 			}
 			DinamicVRPData.Rows.Add(SumVrpCells(0), "-", SumVrpCells(2), SumVrpCells(3), SumVrpCells(4),"-"/*, SumVrpCells(5)*/);
 			DinamicVRPData.Rows[12].DefaultCellStyle.ForeColor = Color.Red;
 
 			rsqw.Text = "R^2 = " + Rsqw;
-			y.Text = $"Y = {a} + {b} * x";
-			y1.Text = $"Y = {a} + {b} * Yi-1";
+			y.Text = $"Y = {a} + {b} * x\nY = {a} + {b} * Yi-1\nYt-1 - ВРП за предыдущий момент времени";
+			//y1.Text = $"Y = {a} + {b} * Yi-1\nYt-1 - ВРП за предыдущий момент времени";
 			sume.Text = $"Сумма отклонений = {SumVrpCells(5)}";
-			sre.Text = $"Среднее значание \nотклонений = {Math.Round(SumVrpCells(5) / (Forms1.numbers.Length - 1),5)}";
+			sre.Text = $"Среднее значание \nотклонений = {Math.Round(SumVrpCells(5) / (Forms1.numbers.Length - 1),5)}\nТ-статистика (|{-9.829}|)  (|{10.943}|)\nT-табличн.    ({2.179})   ({2.179})\nСледовательно:\nкоэф.А - значим.\n-> ВРП за предыдущий\nот начального момента времени (const)\nкоэф. В - значим.\n-> в среднем увеличение ВРП на единицу\nв предыдущий период влияет\nна ВРП в текущем моменте врмени\nв среднем увеличивая его на {Math.Round(b,3)} ед.\nR^2 -> 1 => Изменение времени \nобъясняет изменение ВРП на 93%.";
 		}
 		public double[] arrayCellsDinamicVRPData(int numbercell)
 		{
@@ -80,5 +80,9 @@ namespace StatisticsAnalize
 			RSS.Text = "RSS3^2 = " + 8650270370.33/*rezRSS1()*/ + "\t\nRSS1^2 = " + 3176286744.78/*rezRSS3()*/ + "\t\nFp = " + 2.52 /*Math.Round(rezRSS1()/rezRSS3(),2)*/ + "\t\nFt = " + 7.71 + "\nТак как Fp<Ft, то гетероскедантичность отсутсвует ";
 		}
 
+		private void DinamicVRP_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

@@ -143,7 +143,7 @@ namespace StatisticsAnalize
 			// y
 			// 
 			this.y.AutoSize = true;
-			this.y.Location = new System.Drawing.Point(587, 55);
+			this.y.Location = new System.Drawing.Point(588, 29);
 			this.y.Name = "y";
 			this.y.Size = new System.Drawing.Size(50, 20);
 			this.y.TabIndex = 1;
@@ -152,16 +152,17 @@ namespace StatisticsAnalize
 			// y1
 			// 
 			this.y1.AutoSize = true;
-			this.y1.Location = new System.Drawing.Point(588, 105);
+			this.y1.Location = new System.Drawing.Point(587, 58);
 			this.y1.Name = "y1";
 			this.y1.Size = new System.Drawing.Size(50, 20);
 			this.y1.TabIndex = 1;
 			this.y1.Text = "label1";
+			this.y1.Visible = false;
 			// 
 			// sume
 			// 
 			this.sume.AutoSize = true;
-			this.sume.Location = new System.Drawing.Point(587, 151);
+			this.sume.Location = new System.Drawing.Point(588, 101);
 			this.sume.Name = "sume";
 			this.sume.Size = new System.Drawing.Size(50, 20);
 			this.sume.TabIndex = 2;
@@ -170,7 +171,7 @@ namespace StatisticsAnalize
 			// sre
 			// 
 			this.sre.AutoSize = true;
-			this.sre.Location = new System.Drawing.Point(587, 193);
+			this.sre.Location = new System.Drawing.Point(587, 121);
 			this.sre.Name = "sre";
 			this.sre.Size = new System.Drawing.Size(50, 20);
 			this.sre.TabIndex = 2;
@@ -240,7 +241,7 @@ namespace StatisticsAnalize
 			// RSS
 			// 
 			this.RSS.AutoSize = true;
-			this.RSS.Location = new System.Drawing.Point(588, 417);
+			this.RSS.Location = new System.Drawing.Point(588, 432);
 			this.RSS.Name = "RSS";
 			this.RSS.Size = new System.Drawing.Size(50, 20);
 			this.RSS.TabIndex = 5;
@@ -291,6 +292,7 @@ namespace StatisticsAnalize
 			this.Controls.Add(this.DinamicVRPData);
 			this.Name = "DinamicVRP";
 			this.Text = "DinamicVRP";
+			this.Load += new System.EventHandler(this.DinamicVRP_Load);
 			((System.ComponentModel.ISupportInitialize)(this.DinamicVRPData)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.DWVRPDinamicData)).EndInit();
 			this.ResumeLayout(false);
