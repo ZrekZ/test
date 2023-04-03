@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Build ${{ github.run_number }}
-          path: ./test/outputs/
+          path: ./outputs/
 
       - name: Upload docs
         uses: actions/upload-artifact@v3
