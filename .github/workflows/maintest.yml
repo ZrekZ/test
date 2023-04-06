@@ -46,13 +46,14 @@ jobs:
         with:
           channel: "stable"
       - name: Build
-        run: dotnet build -o outputs/
+        run: dotnet build -o .\outputs/
 
       - name: Make archive
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: zip
           filename: Release.zip
+          path: .\build\windows\runner\Release
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
