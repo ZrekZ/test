@@ -31,6 +31,30 @@ jobs:
         with:
           name: Docs ${{ github.run_number }}
           path: outputs/
+
+  release:
+    name: release
+    needs: [build]
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+      - name: Build
+        run: dotnet build -o outputs/
+
+      - name: Make archive
+        uses: outputs/zip-release@0.7.1
+        with:
+          type: zip
+          filename: Release.zip
+          path: .\build\outputs\Release
+
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
