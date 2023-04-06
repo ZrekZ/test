@@ -55,7 +55,7 @@ jobs:
         with:
           type: zip
           filename: Release.zip
-          path: .\build\windows\runner\Release
+          path: .\outputs\
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
