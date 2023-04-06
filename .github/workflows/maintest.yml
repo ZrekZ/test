@@ -31,3 +31,11 @@ jobs:
         with:
           name: Docs ${{ github.run_number }}
           path: outputs/
+      - name: Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: Build
+          files: Release.zip
