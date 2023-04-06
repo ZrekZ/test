@@ -49,11 +49,11 @@ jobs:
         run: dotnet build -o outputs/
 
       - name: Make archive
-        uses: outputs/zip-release@0.7.1
+        uses: thedoctor0/zip-release@0.7.1
         with:
           type: zip
           filename: Release.zip
-          path: .\build\outputs\Release
+          path: .\build\Release
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
