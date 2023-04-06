@@ -18,19 +18,19 @@ jobs:
         uses: subosito/flutter-action@v2
 
       - name: Build
-        run: dotnet build -o outputs/
+        run: dotnet build -o outputs\
 
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
           name: Build ${{ github.run_number }}
-          path: outputs/
+          path: .\outputs\
 
       - name: Upload docs
         uses: actions/upload-artifact@v3
         with:
           name: Docs ${{ github.run_number }}
-          path: outputs/
+          path: .\outputs\
 
   release:
     name: release
@@ -53,7 +53,7 @@ jobs:
         with:
           type: zip
           filename: Release.zip
-          path: .\build\Release
+          path: .\Release
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
