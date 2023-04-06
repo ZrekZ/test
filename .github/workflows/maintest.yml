@@ -18,50 +18,16 @@ jobs:
         uses: subosito/flutter-action@v2
 
       - name: Build
-        run: dotnet build -o outputs\
+        run: dotnet build -o outputs\test.zip
 
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
           name: Build ${{ github.run_number }}
-          path: .\outputs\
+          path: .\outputs\test.zip
 
       - name: Upload docs
         uses: actions/upload-artifact@v3
         with:
           name: Docs ${{ github.run_number }}
-          path: .\outputs\
-
-  release:
-    name: release
-    needs: [build]
-    runs-on: windows-latest
-    permissions:
-      contents: write
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install Setup .NET Core SDK ${{ matrix.dotnet-version }}
-        uses: subosito/flutter-action@v2
-        with:
-          channel: "stable"
-      - name: Build
-        run: dotnet build -o .\outputs/
-
-      - name: Make archive
-        uses: thedoctor0/zip-release@0.7.1
-        with:
-          type: zip
-          filename: Release.zip
-          path: .\outputs\
-
-      - name: Release
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: "latest"
-          prerelease: false
-          title: Build
-          files: Release.zip
+          path: .\outputs\test.zip
