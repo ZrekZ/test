@@ -18,16 +18,16 @@ jobs:
         uses: subosito/flutter-action@v2
 
       - name: Build
-        run: dotnet build -o outputs\test.zip
+        run: dotnet build -o outputs\test1.zip
 
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
           name: Build ${{ github.run_number }}
-          path: .\outputs\test.zip
+          path: .\outputs\test1.zip
 
       - name: Upload docs
         uses: actions/upload-artifact@v3
         with:
           name: Docs ${{ github.run_number }}
-          path: .\outputs\test.zip
+          path: .\outputs\test1.zip
