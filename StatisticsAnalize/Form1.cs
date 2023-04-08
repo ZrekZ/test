@@ -150,8 +150,8 @@ namespace StatisticsAnalize
 		public void FillTableVRP()
 		{
 			VisibleForm("VRP");
-			double AForLin = 80886899 / 165;   lalin.Text = "A test линейное = " + AForLin;
-			double BForLin = 121269717 / 1430; lblin.Text = "B test линейное = " + BForLin;
+			double AForLin = 80886899 / 165;   lalin.Text = "A test!!! линейное = " + AForLin;
+			double BForLin = 121269717 / 1430; lblin.Text = "B test!!! линейное = " + BForLin;
 
 			double AForPokaz = 566368.38366; lapokaz.Text = "A test показательное = " + AForPokaz;
 			double BForPokaz = 1.09068; lbpokaz.Text = "B test показательное = " + BForPokaz;
