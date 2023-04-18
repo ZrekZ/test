@@ -38,17 +38,17 @@ namespace StatisticsAnalize
 			VRPdata.RowHeadersVisible = false;
 			IPCdata.RowHeadersVisible = false;
 			//TransformDocument("C:\\Users\\Admin\\source\\repos\\StatisticsAnalize\\StatisticsAnalize\\StatisticsAnalize.xml", "C:\\Users\\Admin\\source\\repos\\StatisticsAnalize\\StatisticsAnalize\\");
-			try
-			{
-				var myXslTrans = new XslCompiledTransform();
-				myXslTrans.Load("stylesheet.xsl");
-				myXslTrans.Transform("\"C:/Users/Admin/source/repos/StatisticsAnalize/StatisticsAnalize/StatisticsAnalize.xml", "C:/Users/Admin/source/repos/StatisticsAnalize/StatisticsAnalize/result.html");
-			}
-			catch (Exception)
-			{
+			//try
+			//{
+			//	var myXslTrans = new XslCompiledTransform();
+			//	myXslTrans.Load("stylesheet.xsl");
+			//	myXslTrans.Transform("\"C:/Users/Admin/source/repos/StatisticsAnalize/StatisticsAnalize/StatisticsAnalize.xml", "C:/Users/Admin/source/repos/StatisticsAnalize/StatisticsAnalize/result.html");
+			//}
+			//catch (Exception)
+			//{
 
-				throw;
-			}
+			//	throw;
+			//}
 			
         }
 
