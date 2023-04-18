@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AutoRegress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DinamicIPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DinamicVRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DW_IPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DW_VRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FutureIPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FutureVRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GFormIPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GFormVRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IPCtoVRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="VRPtoIPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
