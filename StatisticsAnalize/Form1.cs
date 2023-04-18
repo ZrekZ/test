@@ -7,9 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
+using FireSharp;
+using System.IO;
+using System.Xml;
+using System.Xml.Xsl;
 
 namespace StatisticsAnalize
 {
+	/// <summary>Главная форма программы
+	/// </summary>
+	/// <param name="numbers">Начальная дата рабочего периода</param>
+	/// <param name="years">расчетный год</param>
+	/// <param name="VRPs">Валовой региональный продукт</param>
+	/// <param name="IPCs">Индекс потребительских цен</param>
+
 	public partial class Forms1 : Form
 	{
 		static public int[] numbers = { 1,2,3,4,5,6,7,8,9,10,11,12};
@@ -18,15 +32,71 @@ namespace StatisticsAnalize
 		static public double[] IPCs = { 110.2, 106.7, 107.3, 106.5, 110.4, 112.6, 105.4, 101.4, 103.8, 103.1, 104.5, 108.9 };
 		public Forms1()
 		{
+			
 			InitializeComponent();
 			DefData.RowHeadersVisible = false;
 			VRPdata.RowHeadersVisible = false;
 			IPCdata.RowHeadersVisible = false;
-		}
+			//TransformDocument("C:\\Users\\Admin\\source\\repos\\StatisticsAnalize\\StatisticsAnalize\\StatisticsAnalize.xml", "C:\\Users\\Admin\\source\\repos\\StatisticsAnalize\\StatisticsAnalize\\");
+			try
+			{
+				var myXslTrans = new XslCompiledTransform();
+				myXslTrans.Load("stylesheet.xsl");
+				myXslTrans.Transform("\"C:/Users/Admin/source/repos/StatisticsAnalize/StatisticsAnalize/StatisticsAnalize.xml", "C:/Users/Admin/source/repos/StatisticsAnalize/StatisticsAnalize/result.html");
+			}
+			catch (Exception)
+			{
 
+				throw;
+			}
+			
+        }
+
+        //public static string TransformDocument(string doc, string stylesheetPath)
+        //{
+        //    Func<string, XmlDocument> GetXmlDocument = (xmlContent) =>
+        //    {
+        //        XmlDocument xmlDocument = new XmlDocument();
+        //        xmlDocument.LoadXml(xmlContent);
+        //        return xmlDocument;
+        //    };
+
+        //    try
+        //    {
+        //        var document = GetXmlDocument(doc);
+        //        var style = GetXmlDocument(File.ReadAllText(stylesheetPath));
+
+        //        System.Xml.Xsl.XslCompiledTransform transform = new System.Xml.Xsl.XslCompiledTransform();
+        //        transform.Load(style); // compiled stylesheet
+        //        System.IO.StringWriter writer = new System.IO.StringWriter();
+        //        XmlReader xmlReadB = new XmlTextReader(new StringReader(document.DocumentElement.OuterXml));
+        //        transform.Transform(xmlReadB, null, writer);
+        //        return writer.ToString();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+
+        //}
+        IFirebaseConfig ifc = new FirebaseConfig()
+		{
+			AuthSecret = "KSKMWZtkJGYDKBTxkQz1QShCZZSGtR2vwKn16k2Q",
+			BasePath = "\r\nhttps://testaut-7a223-default-rtdb.firebaseio.com\r\n"
+        };
+		IFirebaseClient client;
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			VisibleForm(null);
+			try
+			{
+				client = new FirebaseClient(ifc);
+			}
+			catch (Exception er)
+			{
+
+				MessageBox.Show($"{er}");;
+			}
 		}
 		private void VisibleLabel(bool flag)
 		{

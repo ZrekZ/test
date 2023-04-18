@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StatisticsAnalize</name>
+    </assembly>
+    <members>
+        <member name="F:StatisticsAnalize.AutoRegress.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.AutoRegress.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.AutoRegress.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:StatisticsAnalize.DataToExcel">
+            <summary>Класс передачи данных в Excel</summary>
+        </member>
+        <member name="M:StatisticsAnalize.DataToExcel.ExcelizeData(StatisticsAnalize.DataToExcel.ExportDataToExcelDelegate)">
+            <summary>Вызов создания и открытие XLS-файла в Microsoft Excel</summary>
+            <param name="exportDelegate">Метод выгрузки данных в файл, принимающий параметр "Путь"</param>
+            <remarks>На папку временных файлов пользователя, Office ругается, считая её ненадёжным местом</remarks>
+        </member>
+        <member name="T:StatisticsAnalize.DataToExcel.ExportDataToExcelDelegate">
+            <summary>Делегат сохранения данных в XLS-файле по заданному пути</summary>
+            <param name="path">Путь по которому должен бытьсохранён файл</param>
+        </member>
+        <member name="F:StatisticsAnalize.DinamicIPC.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.DinamicIPC.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.DinamicIPC.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.DinamicVRP.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.DinamicVRP.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.DinamicVRP.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.DW_IPC.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.DW_IPC.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.DW_IPC.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.DW_VRP.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.DW_VRP.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.DW_VRP.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:StatisticsAnalize.Forms1">
+            <summary>Главная форма программы
+            </summary>
+            <param name="numbers">Начальная дата рабочего периода</param>
+            <param name="years">расчетный год</param>
+            <param name="VRPs">Валовой региональный продукт</param>
+            <param name="IPCs">Индекс потребительских цен</param>
+        </member>
+        <member name="F:StatisticsAnalize.Forms1.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.Forms1.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.Forms1.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.FutureIPC.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.FutureIPC.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.FutureIPC.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.FutureVRP.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.FutureVRP.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.FutureVRP.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.GFormIPC.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.GFormIPC.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.GFormIPC.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.GFormVRP.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.GFormVRP.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.GFormVRP.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.IPCtoVRP.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.IPCtoVRP.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.IPCtoVRP.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:StatisticsAnalize.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:StatisticsAnalize.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:StatisticsAnalize.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="F:StatisticsAnalize.VRPtoIPC.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StatisticsAnalize.VRPtoIPC.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StatisticsAnalize.VRPtoIPC.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
